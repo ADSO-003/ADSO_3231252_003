@@ -103,22 +103,24 @@ This project follows the **Git Flow** branching strategy:
 
 ---
 
-##  Documentation
+## Documentation
 
-All diagrams, user stories, mockups, and technical documentation are available in the **[Wiki](../../wiki)**.
+All diagrams, user stories, mockups, and technical documentation are available in the **[Wiki](https://github.com/ADSO-003/ADSO_3231252_003/wiki)**.
 
 | Section | Link |
-|---------|------|
-|  Home | [Wiki Home](../../wiki/Home) |
-|  Team Members | [Members](../../wiki/Members) |
-|  Architecture | [Architecture Diagram](../../wiki/Architecture) |
-|  Components | [Component Diagram](../../wiki/Diagrama-Componentes) |
-|  Deployment | [Deployment Diagram](../../wiki/Diagrama-Despliegue) |
-|  Class Diagram | [Class Diagram](../../wiki/Diagrama-Clases) |
-|  Entity-Relationship | [ER Model](../../wiki/Modelo-ER) |
-|  Context Diagram | [C4 Context](../../wiki/Diagrama-Contexto) |
-|  Sequence Diagrams | [Sequence Diagrams](../../wiki/Diagramas-Secuencia) |
-|  User Stories | [User Stories](../../wiki/Historias-de-Usuario) |
+| --- | --- |
+| Home | [Wiki Home](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Home) |
+| Team Members | [Members](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Members) |
+| General Flow Diagram | [General Flow Diagram](https://github.com/ADSO-003/ADSO_3231252_003/wiki/General-Flow-Diagram) |
+| Architecture | [Architecture Diagram](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Architecture) |
+| Components | [Component Diagram](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Component-Diagram) |
+| Deployment | [Deployment Diagram](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Deployment-Diagram) |
+| Class Diagram | [Class Diagram](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Class-Diagram) |
+| Entity-Relationship | [ER Model](https://github.com/ADSO-003/ADSO_3231252_003/wiki/ER-Model) |
+| Context Diagram | [C4 Context](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Context-Diagram) |
+| Sequence Diagrams | [Sequence Diagrams](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Sequence-Diagrams) |
+| User Stories | [User Stories](https://github.com/ADSO-003/ADSO_3231252_003/wiki/User-Stories) |
+| Sprint 1 Gantt | [Gantt Chart](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Sprint-1-Gantt) |
 
 ---
 
