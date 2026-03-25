@@ -8,7 +8,7 @@
 
 ---
 
-## 📋 Description
+##  Description
 
 SIGMUI is a web/mobile platform integrated with WhatsApp for the management of regulated urban parking. It allows users to make reservations, process simulated payments, and manage parking zones through an intuitive interface.
 
@@ -16,7 +16,7 @@ This project is developed as the final project for the **Software Analysis and D
 
 ---
 
-## 🎯 Scope
+##  Scope
 
 - ✅ Web and mobile application
 - ✅ WhatsApp integration
@@ -27,7 +27,7 @@ This project is developed as the final project for the **Software Analysis and D
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -41,7 +41,7 @@ This project is developed as the final project for the **Software Analysis and D
 
 ---
 
-## 👥 Team
+##  Team
 
 | Name | Role | GitHub |
 |------|------|--------|
@@ -53,7 +53,7 @@ This project is developed as the final project for the **Software Analysis and D
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 SIGMUI is built on a **3-layer N-Tier architecture**:
 ```
@@ -70,14 +70,14 @@ For detailed diagrams, visit the [Wiki](../../wiki).
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 >  The codebase will be added in upcoming sprints. 
 > Current repository contains project documentation and planning materials.
 
 ---
 
-## 📋 Functional Requirements
+##  Functional Requirements
 
 | ID | Requirement |
 |----|-------------|
@@ -90,7 +90,7 @@ For detailed diagrams, visit the [Wiki](../../wiki).
 
 ---
 
-## 🔄 Git Flow
+##  Git Flow
 
 This project follows the **Git Flow** branching strategy:
 
@@ -103,7 +103,7 @@ This project follows the **Git Flow** branching strategy:
 
 ---
 
-## 📖 Documentation
+##  Documentation
 
 All diagrams, user stories, mockups, and technical documentation are available in the **[Wiki](../../wiki)**.
 
@@ -122,7 +122,7 @@ All diagrams, user stories, mockups, and technical documentation are available i
 
 ---
 
-## ⚙️ Non-Functional Requirements
+##  Non-Functional Requirements
 
 | Category | Specification |
 |----------|--------------|
@@ -133,7 +133,7 @@ All diagrams, user stories, mockups, and technical documentation are available i
 
 ---
 
-## ⚠️ Assumptions & Limitations
+##  Assumptions & Limitations
 
 - System operates in an **academic environment**
 - No integration with a real banking gateway
@@ -142,7 +142,7 @@ All diagrams, user stories, mockups, and technical documentation are available i
 
 ---
 
-## 📅 Project Management
+##  Project Management
 
 - **Methodology:** Scrum with defined sprints
 - **Version Control:** Git Flow (mandatory)
