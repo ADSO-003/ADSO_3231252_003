@@ -1,159 +1,112 @@
 <div align="center">
 
-# SIGMUI
-### Intelligent Urban Mobility Management System
-### *Sistema Integral de Gestión de Movilidad Urbana Inteligente*
+# PARKEA — Smart Parking Reservation System
+
+![Status](https://img.shields.io/badge/status-in%20development-yellow)
+![License](https://img.shields.io/badge/license-Academic-blue)
 
 </div>
 
 ---
 
-##  Description
+## 🚀 Description
 
-SIGMUI is a web/mobile platform integrated with WhatsApp for the management of regulated urban parking. It allows users to make reservations, process simulated payments, and manage parking zones through an intuitive interface.
+**PARKEA** is a web and mobile platform for regulated urban parking management, featuring spot reservations, simulated payments, and zone administration.
 
-This project is developed as the final project for the **Software Analysis and Development (ADSO)** program at SENA, Group 003 – File 3231252.
+The system allows:
+- User registration and JWT authentication
+- Vehicle management per user account
+- Parking zone browsing and spot reservation
+- Simulated payment processing
+- Administrative panel with dashboard and user management
+
+Does **NOT** include:
+- Real banking payment gateway
+- Real-time GPS geolocation
+- Native mobile application (responsive web only)
 
 ---
 
-##  Scope
+## 🏗️ Architecture
 
-- ✅ Web and mobile application
-- ✅ WhatsApp integration
-- ✅ Parking zone management
-- ✅ Slot reservations
-- ✅ Simulated payment processing
-- ✅ Administrative dashboard
-
----
-
-##  Tech Stack
+Client-Server N-Tier Architecture:
 
 | Layer | Technology |
 |-------|-----------|
-| Frontend | React / Angular |
-| Backend | Node.js / Python |
-| Database | PostgreSQL / MySQL |
-| Authentication | JWT (JSON Web Tokens) |
-| Security | bcrypt |
-| Containers | Docker |
-| External APIs | Google Maps API, Payment Gateway Simulator |
+| Frontend | HTML5 + CSS3 + JavaScript |
+| Backend | Node.js — REST API |
+| Database | PostgreSQL |
+| Authentication | JWT |
 
 ---
 
-##  Team
+## 🌱 Branch Strategy
+
+- main       → Final delivery
+- release    → Stable pre-delivery versions
+- develop    → Team integration branch
+- feature/*  → One branch per User Story
+
+---
+
+## 📂 Project Structure
+
+```
+PARKEA/
+├── backend/src/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   └── middlewares/
+├── frontend/
+│   ├── css/global.css
+│   ├── js/utils/
+│   └── pages/
+│       ├── HU01-Homepage/
+│       └── ... (one folder per HU)
+├── database/schema.sql
+├── docs/mockups/
+└── README.md
+```
+
+---
+
+## 🎨 Design — Figma
+
+[View mockups in Figma](https://www.figma.com/design/SD51rDFRFIsGMBIgsyi4Pc/mockups?node-id=2-39&p=f&t=wxPCu28dAiXRWzSL-0)
+
+---
+
+## 👥 Development Team
 
 | Name | Role | GitHub |
 |------|------|--------|
-| Michael Isaza | Scrum Master | [@MichaellIsaza](https://github.com/MichaellIsaza) |
+| Michael Isaza | Scrum Master | [@MichaelIsaza](https://github.com/MichaelIsaza) |
 | Jhoan Marín | Full Stack Developer | [@jhoanmarin227](https://github.com/jhoanmarin227) |
 | Stiven Sánchez | Backend Developer | [@Stiven5-ctrl](https://github.com/Stiven5-ctrl) |
 | David León | Frontend Developer | [@David-Leon1089](https://github.com/David-Leon1089) |
-| Jhoan Almario | Analyst | [@johan_almario](https://github.com/johan_almario) |
+| Jhoan Almario | Analyst | [@centinel117](https://github.com/centinel117) |
 
 ---
 
-##  Architecture
+## 🛠️ Installation
 
-SIGMUI is built on a **3-layer N-Tier architecture**:
-```
-┌─────────────────────────────────┐
-│     Presentation Layer          │  React / Angular (Web & Mobile)
-├─────────────────────────────────┤
-│     Business Logic Layer        │  REST API · Controllers · JWT · Services
-├─────────────────────────────────┤
-│     Persistence Layer           │  Relational DB · ORM · Transactions
-└─────────────────────────────────┘
+```bash
+git clone https://github.com/ADSO-003/ADSO_3231252_003.git
+cd ADSO_3231252_003
+
+# Open any page directly in browser:
+# frontend/pages/HU01-Homepage/index.html
 ```
 
-For detailed diagrams, visit the [Wiki](../../wiki).
+---
+
+## 📚 Documentation
+
+Full documentation available on the project **[Wiki](../../wiki)**.
 
 ---
 
-##  Repository Structure
+## 🎓 Academic Context
 
->  The codebase will be added in upcoming sprints. 
-> Current repository contains project documentation and planning materials.
-
----
-
-##  Functional Requirements
-
-| ID | Requirement |
-|----|-------------|
-| RF-01 | User Registration |
-| RF-02 | JWT Authentication |
-| RF-03 | Zone Management |
-| RF-04 | Slot Reservation |
-| RF-05 | Simulated Payment |
-| RF-06 | Administrative Panel |
-
----
-
-##  Git Flow
-
-This project follows the **Git Flow** branching strategy:
-
-| Branch | Purpose |
-|--------|---------|
-| `main` | Stable production version |
-| `develop` | Active development branch |
-| `release` | Release preparation |
-| `feature/*` | Individual feature development |
-
----
-
-## Documentation
-
-All diagrams, user stories, mockups, and technical documentation are available in the **[Wiki](https://github.com/ADSO-003/ADSO_3231252_003/wiki)**.
-
-| Section | Link |
-| --- | --- |
-| Home | [Wiki Home](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Home) |
-| Team Members | [Members](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Members) |
-| General Flow Diagram | [General Flow Diagram](https://github.com/ADSO-003/ADSO_3231252_003/wiki/General-Flow-Diagram) |
-| Architecture | [Architecture Diagram](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Architecture) |
-| Components | [Component Diagram](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Component-Diagram) |
-| Deployment | [Deployment Diagram](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Deployment-Diagram) |
-| Class Diagram | [Class Diagram](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Class-Diagram) |
-| Entity-Relationship | [ER Model](https://github.com/ADSO-003/ADSO_3231252_003/wiki/ER-Model) |
-| Context Diagram | [C4 Context](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Context-Diagram) |
-| Sequence Diagrams | [Sequence Diagrams](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Sequence-Diagrams) |
-| User Stories | [User Stories](https://github.com/ADSO-003/ADSO_3231252_003/wiki/User-Stories) |
-| Sprint 1 Gantt | [Gantt Chart](https://github.com/ADSO-003/ADSO_3231252_003/wiki/Sprint-1-Gantt) |
-
----
-
-##  Non-Functional Requirements
-
-| Category | Specification |
-|----------|--------------|
-| **Security** | bcrypt password encryption · JWT (1h expiration) · Role-based access control |
-| **Performance** | Response time < 3 seconds under 50 concurrent users |
-| **Availability** | 95% uptime in local environment · Structured HTTP error handling |
-| **Usability** | Responsive interface · Visual status indicators |
-
----
-
-##  Assumptions & Limitations
-
-- System operates in an **academic environment**
-- No integration with a real banking gateway
-- No real-time geolocation
-- No native mobile application
-
----
-
-##  Project Management
-
-- **Methodology:** Scrum with defined sprints
-- **Version Control:** Git Flow (mandatory)
-- **Instructors:** Yuely (Lead) · Sebastián
-
----
-
-<div align="center">
-
- **ADSO Group 003 – SENA** · File 3231252 · 2026
-
-</div>
+**Program:** ADSO – SENA · **Ficha:** 3231252 · **Group:** 003 · **Year:** 2026
