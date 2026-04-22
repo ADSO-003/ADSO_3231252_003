@@ -1,0 +1,22 @@
+# Node.js
+node_modules/
+
+# Environment variables — NEVER push
+.env
+.env.local
+.env.production
+
+# Build
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Editor
+.vscode/settings.json
+.idea/
