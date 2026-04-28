@@ -175,3 +175,67 @@ header{
     text-align: right;
     font-weight: bold;
 }
+
+.nota{
+    margin-top: 20px;
+}
+
+.caja-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-pago{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.donut{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #4CAF50 0% 60%,
+        #FF9800 60% 85%,
+        #F44336 85% 100%
+    );
+    position: relative;
+}
+
+.donut::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #2b2b2b;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* NUMERO */
+.donut span{
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.Contenedor3{
+    background-color: rgb(245, 245, 250);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    gap: 35px;
+    top: 50px;
+    margin-top: 20px;
+}
