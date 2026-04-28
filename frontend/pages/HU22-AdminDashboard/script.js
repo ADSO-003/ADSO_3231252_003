@@ -105,3 +105,32 @@ setInterval(() => {
     actualizarBarras();
     verificarZonas();
 }, 5000);
+
+const pagos = [3600, 2000, 3000, 3200, 3500];
+
+function cargarPagos() {
+    const contenedor = document.querySelector(".caja2:last-child");
+
+    contenedor.innerHTML = "<h2>Pagos Recientes</h2>";
+
+    pagos.forEach(p => {
+        contenedor.innerHTML += `
+            <div class="pago">
+                <span>Estado de Pago</span>
+                <span class="dinero">$${p}</span>
+            </div>
+        `;
+    });
+}
+
+cargarPagos();
+
+function actualizarBarras() {
+    const barras = document.querySelectorAll(".progreso2");
+
+    barras.forEach(barra => {
+        let valor = Math.floor(Math.random() * 100);
+        barra.style.width = valor + "%";
+    });
+}
+
