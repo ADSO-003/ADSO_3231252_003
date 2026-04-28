@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Gestión de Usuarios</title>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <img src="../../assets/icons/logoParkea.png">
+    </div>
+
+    <div class="menu">
+
+        <button class="botones" id="btnAtras">Atras</button>
+        <button class="botones" id="btnSalir">Salir</button>
+
+        <div class="contenedor-perfil">
+            <img src="../../assets/icons/logoPerfil.png" class="perfil">
+
+            <nav class="avatar-menu">
+                <a href="#">Mis vehículos</a>
+                <a href="#">Mi perfil</a>
+                <a href="#" id="logoutLink">Cerrar sesión</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="top-bar">
+    <h1>Gestión de Usuarios</h1>
+     <div class="resumen">
+        <div>Total: <span id="total">0</span></div>
+        <div>Activos: <span id="activos">0</span></div>
+        <div>Admins: <span id="admins">0</span></div>
+        <div>Inactivos: <span id="inactivos">0</span></div>
+    </div>
+</div>
+
+<div class="buscador">
+    <input type="text" id="buscarID" placeholder="Buscar por ID">
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Nombre</th>
+<th>ID</th>
+<th>Rol</th>
+<th>Estado</th>
+<th>Registro</th>
+<th>Reservas</th>
+<th>Rol</th>
+<th>Activación</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td data-label="Nombre">Juan</td>
+<td data-label="ID">10000000</td>
+<td data-label="Rol" class="rol">Ciudadano</td>
+<td data-label="Estado"><span class="badge activo estado">Activo</span></td>
+<td data-label="Registro">10/10/26</td>
+<td data-label="Reservas">7</td>
+<td data-label="Rol Acción"><button class="btn verde rolBtn">Hacer Admin</button></td>
+<td data-label="Activación"><button class="btn rojo activarBtn">Desactivar</button></td>
+</tr>
+
+<tr>
+<td data-label="Nombre">María</td>
+<td data-label="ID">10000001</td>
+<td data-label="Rol" class="rol">Ciudadano</td>
+<td data-label="Estado"><span class="badge activo estado">Activo</span></td>
+<td data-label="Registro">10/10/26</td>
+<td data-label="Reservas">5</td>
+<td data-label="Rol Acción"><button class="btn verde rolBtn">Hacer Admin</button></td>
+<td data-label="Activación"><button class="btn rojo activarBtn">Desactivar</button></td>
+</tr>
+
+<tr>
+<td data-label="Nombre">Jhoan</td>
+<td data-label="ID">10000002</td>
+<td data-label="Rol" class="rol">Admin</td>
+<td data-label="Estado"><span class="badge activo estado">Activo</span></td>
+<td data-label="Registro">10/10/26</td>
+<td data-label="Reservas">3</td>
+<td data-label="Rol Acción"><button class="btn rojo rolBtn">Quitar Admin</button></td>
+<td data-label="Activación"><button class="btn rojo activarBtn">Desactivar</button></td>
+</tr>
+
+<tr>
+<td data-label="Nombre">Luisa</td>
+<td data-label="ID">10000003</td>
+<td data-label="Rol" class="rol">Ciudadano</td>
+<td data-label="Estado"><span class="badge inactivo estado">Inactivo</span></td>
+<td data-label="Registro">10/10/26</td>
+<td data-label="Reservas">9</td>
+<td data-label="Rol Acción"><button class="btn verde rolBtn">Hacer Admin</button></td>
+<td data-label="Activación"><button class="btn verde activarBtn">Activar</button></td>
+</tr>
+
+<tr class="superAdmin">
+<td data-label="Nombre">Carlos</td>
+<td data-label="ID">10000004</td>
+<td data-label="Rol" class="rol">Admin</td>
+<td data-label="Estado"><span class="badge activo estado">Activo</span></td>
+<td data-label="Registro">10/10/26</td>
+<td data-label="Reservas">6</td>
+<td data-label="Rol Acción"><button class="btn rojo rolBtn">Quitar Admin</button></td>
+<td data-label="Activación"><button class="btn rojo activarBtn">Desactivar</button></td>
+</tr>
+
+<tr>
+<td data-label="Nombre">Sofía</td>
+<td data-label="ID">10000005</td>
+<td data-label="Rol" class="rol">Admin</td>
+<td data-label="Estado"><span class="badge activo estado">Activo</span></td>
+<td data-label="Registro">10/10/26</td>
+<td data-label="Reservas">7</td>
+<td data-label="Rol Acción"><button class="btn rojo rolBtn">Quitar Admin</button></td>
+<td data-label="Activación"><button class="btn rojo activarBtn">Desactivar</button></td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="historial">
+    <h3>Cambios Recientes</h3>
+    <ul id="log"></ul>
+</div>
+
+<div id="contenedorAlertas"></div>
+
+<script src="js/HU_11.js"></script>
+
+</body>
+</html>
