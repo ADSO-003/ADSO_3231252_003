@@ -40,3 +40,5 @@ document.querySelectorAll(".activarBtn").forEach(btn=>{
             mostrarAlerta("Acción bloqueada", "error");
             return;
         }
+
+        
