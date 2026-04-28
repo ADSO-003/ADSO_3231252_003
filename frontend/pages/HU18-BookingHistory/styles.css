@@ -368,7 +368,139 @@ h1{
     color:#555;
     border:1.5px solid #ccc !important;
 }
-.btn-no:hover{ background:#e0e0e0; }
+.btn-no:hover{ background:#e0e0e0; 
+}
+
+.card{
+    background:#f5f5f5;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+}
+
+.card h3{
+    margin-bottom:5px;
+}
+
+.sub{
+    color:gray;
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.item{
+    font-size:14px;
+}
+
+.cancelar{
+    background:#0d1f2d;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+
+.alerta-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+    z-index:300;
+    justify-content:center;
+    align-items:center;
+}
+.alerta-overlay.visible{
+    display:flex;
+}
+
+.alerta-box{
+    background:#fff;
+    border-radius:16px;
+    padding:28px 24px;
+    width:340px;
+    max-width:90vw;
+    box-shadow:0 8px 32px rgba(0,0,0,0.18);
+}
+
+.alerta-titulo{
+    font-size:16px;
+    font-weight:700;
+    color:#0B1121;
+    margin-bottom:14px;
+    padding-bottom:10px;
+    border-bottom:1px solid #eee;
+}
+
+.alerta-fila{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#fff8e1;
+    border:1px solid #ffe082;
+    border-radius:12px;
+    padding:14px 16px;
+    margin-bottom:10px;
+}
+
+.alerta-fila .icono-warn{
+    font-size:22px;
+    flex-shrink:0;
+}
+
+.alerta-fila .alerta-texto{
+    font-size:14px;
+    color:#333;
+    line-height:1.4;
+}
+
+.alerta-fila{
+    border-left:4px solid #e53935;
+    background:#fff;
+    border-top:1px solid #eee;
+    border-right:1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+
+.alerta-botones{
+    display:flex;
+    gap:10px;
+    margin-top:18px;
+}
+
+.alerta-botones button{
+    flex:1;
+    padding:11px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    border:none;
+}
+
+.btn-si{
+    background:#e53935;
+    color:#fff;
+}
+.btn-si:hover{ background:#c62828; }
+
+.btn-no{
+    background:#f0f0f0;
+    color:#555;
+    border:1.5px solid #ccc !important;
+}
+.btn-no:hover{ background:#e0e0e0; 
+}
 
 
 @media (max-width: 480px){

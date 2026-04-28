@@ -64,7 +64,21 @@ function render() {
     const esCancelada = r.estado === "cancelada";
     const pagoTexto   = esCancelada ? "❌ Pago: Cancelado" : "✅ Pago: Completado";
 
-   
+      card.innerHTML = `
+      <h3>${r.zona}</h3>
+      <div class="sub">Reserva #${r.id}</div>
+      <div class="info">
+        <div class="item">🗓️ Fecha: ${r.fecha}</div>
+        <div class="item">🕛 Hora Inicio: ${r.horaInicio}</div>
+        <div class="item">🕛 Hora Fin: ${r.horaFin}</div>
+        <div class="item">💵 Total: ${r.total}</div>
+        <div class="item">Placa: ${r.placa}</div>
+        <div class="item">${pagoTexto}</div>
+        <button class="cancelar" ${esCancelada ? "disabled" : ""}>
+          ${esCancelada ? "Cancelada" : "Cancelar"}
+        </button>
+      </div>
+      `;
 
     if (esCancelada) {
       card.style.opacity = "0.65";
