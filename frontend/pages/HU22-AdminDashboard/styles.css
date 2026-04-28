@@ -33,3 +33,54 @@ header{
     border: 2px solid white;
     cursor: pointer;
 }
+.filtros-tiempo{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* PERFIL */
+.perfil{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.avatar-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+
+    background: #e9e9e9; /* gris claro */
+    border-radius: 12px;
+    min-width: 180px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    padding: 5px 0;
+    z-index: 300;
+}
+
+.avatar-menu a {
+    display: block;
+    padding: 12px 18px;
+    font-size: 15px;
+    color: #888987;
+    text-decoration: none;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.avatar-menu a:last-child {
+    border-bottom: none;
+}
+
+.avatar-menu a:hover {
+    background: #dcdcdc;
+    border-radius: 8px;
+}
+
+.avatar-menu.activo {
+    display: block;
+}
