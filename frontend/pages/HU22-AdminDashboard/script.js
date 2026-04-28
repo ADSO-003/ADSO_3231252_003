@@ -91,3 +91,17 @@ function mostrarAlerta(mensaje){
         alerta.remove();
     }, 4000);
 }
+
+function actualizarBarras() {
+    const barras = document.querySelectorAll(".progreso2");
+
+    barras.forEach(barra => {
+        let valor = Math.floor(Math.random() * 100);
+        barra.style.width = valor + "%";
+    });
+}
+
+setInterval(() => {
+    actualizarBarras();
+    verificarZonas();
+}, 5000);
