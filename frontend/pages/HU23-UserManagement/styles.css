@@ -16,3 +16,19 @@ body{
 .logo img{
     height: 50px;
 }
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.botones{
+    height: 35px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
