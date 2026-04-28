@@ -72,3 +72,22 @@ window.onload = () => {
     verificarSistema();
     verificarZonas();
 };
+
+function mostrarAlerta(mensaje){
+    const contenedor = document.getElementById("contenedor-alertas");
+
+    const alerta = document.createElement("div");
+    alerta.classList.add("alerta");
+
+    alerta.innerHTML = `
+        <i>⚠️</i>
+        <i>⚠️</i>
+        <span>${mensaje}</span>
+    `;
+
+    contenedor.appendChild(alerta);
+
+    setTimeout(()=>{
+        alerta.remove();
+    }, 4000);
+}
