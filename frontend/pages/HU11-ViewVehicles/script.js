@@ -13,10 +13,10 @@ let scrollObserver = null;
 
 /* ÍCONOS POR TIPO */
 function typeIcon(type) {
-    if (type === 'motocicleta') 
+    if (type === 'motocicleta')
         return `<img class="icon-type" src="../../assets/icons/motocicleta.png" alt="icono de motocicleta">`;
 
-    if (type === 'camion') 
+    if (type === 'camion')
         return `<img class="icon-type" src="../../assets/icons/camion.png" alt="icono de camión">`;
 
     return `<img class="icon-type" src="../../assets/icons/automovil.png" alt="icono de automóvil">`;
@@ -160,7 +160,7 @@ function buildCard(v) {
     </div>
     `;
 
-    
+
 
     // Estrella: solo una a la vez
     li.querySelector('.btn-star').addEventListener('click', () => setDefault(vid));
@@ -229,3 +229,74 @@ function rebuildList() {
         scrollObserver = null;
     }
 
+
+    const list = document.getElementById('vehiclesList');
+    list.innerHTML = '';
+    renderedCount = 0;
+    updateSubtitle();
+
+    if (allVehicles.length === 0) {
+        showEmpty(true);
+        document.getElementById('pageFooter').style.display = 'none';
+        document.getElementById('mobileBackBar').style.display = 'none';
+        return;
+    }
+
+    showEmpty(false);
+    renderBatch();
+    // Reconectar infinite scroll si hace falta
+    setupInfiniteScroll();
+}
+
+/* HELPERS */
+function updateSubtitle() {
+    const n = allVehicles.length;
+    document.getElementById('vehicleSubtitle').textContent =
+        `${n} vehículo${n !== 1 ? 's' : ''} registrado${n !== 1 ? 's' : ''} - Ordenados por fecha de registro`;
+}
+
+function save() {
+    localStorage.setItem('parkea_vehicles', JSON.stringify(allVehicles));
+}
+
+function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.className = 'toast show';
+    clearTimeout(t._timer);
+    t._timer = setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+function getMock() {
+    return [
+        { id: 1, plate: 'ABC 123', type: 'automovil', brand: 'Toyota', model: 'Corolla 2022', color: 'azul', isDefault: true, createdAt: '2026-04-01T10:00:00Z' },
+        { id: 2, plate: 'XYZ 45H', type: 'motocicleta', brand: 'Honda', model: 'CB500F 2021', color: 'negro', isDefault: false, createdAt: '2026-03-20T09:00:00Z' },
+        { id: 3, plate: 'DEF 789', type: 'automovil', brand: 'Chevrolet', model: 'Captiva 2020', color: 'rojo', isDefault: false, createdAt: '2026-03-10T08:00:00Z' },
+        { id: 4, plate: 'WXY 734', type: 'camion', brand: 'JMC', model: 'Conquer 6T', color: 'amarillo', isDefault: false, createdAt: '2026-02-15T07:00:00Z' },
+    ];
+}
+
+/* TOASTS DE RETORNO (desde HU-10, HU-12, HU-13) */
+const qs = new URLSearchParams(location.search);
+if (qs.get('registered') === 'true') {
+    history.replaceState({}, '', location.pathname);
+    window.addEventListener('load', () => showToast('¡Vehículo registrado correctamente!'));
+}
+if (qs.get('updated') === 'true') {
+    history.replaceState({}, '', location.pathname);
+    window.addEventListener('load', () => showToast('Vehículo actualizado correctamente.'));
+}
+if (qs.get('deleted') === 'true') {
+    history.replaceState({}, '', location.pathname);
+    window.addEventListener('load', () => showToast('Vehículo eliminado correctamente.'));
+}
+
+/* LOGOUT */
+document.getElementById('logoutLink')?.addEventListener('click', e => {
+    e.preventDefault();
+    localStorage.removeItem('parkea_token');
+    window.location.href = '../HU02-Homepage/index.html';
+});
+
+/* Iniciar */
+loadVehicles();
