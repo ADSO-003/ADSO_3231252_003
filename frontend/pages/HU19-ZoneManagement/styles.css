@@ -172,3 +172,24 @@ body{
     right: 0;
     left: auto;
 }
+.tabla{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0 10px;
+}
+.thead{
+  background:#0b1f2a;
+  color:#fff;
+}
+.thead th{
+  padding:12px;
+  text-align:left;
+  font-weight:bold;
+}
+.fila{
+  background:#f4f4f4;
+  border:1px solid #ffffff;
+}
+.fila td{
+  padding:14px;
+}
