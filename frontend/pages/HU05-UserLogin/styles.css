@@ -24,6 +24,31 @@ body {
     text-align: center;
 }
 
+/* ===============================
+🔵 AC-3: BOTÓN ADMINISTRADOR
+=============================== */
+.admin-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    background: #0d1b2a;
+    color: white;
+    border: none;
+
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+/* 🔵 AC-3: EFECTO CLICK BOTÓN ADMIN */
+.admin-btn:active {
+    transform: scale(0.95);
+}
 
 /* ===============================
 🔵 AC-1: LOGO DEL SISTEMA
