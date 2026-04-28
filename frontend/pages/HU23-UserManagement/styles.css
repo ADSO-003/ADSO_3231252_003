@@ -158,3 +158,29 @@ tr:nth-child(even){
 .activoFiltro{
     background-color: #0b1121;
 }
+
+/* ALERTAS */
+#contenedorAlertas{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.alertaToast{
+    min-width: 250px;
+    padding: 12px 15px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    font-size: 14px;
+    border-left: 6px solid #dc3545;
+    animation: aparecer 0.4s forwards;
+}
+
+.success{ border-left:6px solid #28a745; }
+.error{ border-left:6px solid #dc3545; }
+.info{ border-left:6px solid #007bff; }
