@@ -106,13 +106,68 @@ input {
 }
 
 
-/* ===============================
-🔵 AC-2 y AC-9: LINKS (REGISTRO Y RECUPERACIÓN)
-=============================== */
+/* AC-2 y AC-9: LINKS (REGISTRO Y RECUPERACIÓN) */
 .link {
     margin-top: 15px;
     font-size: 14px;
     color: #333;
     cursor: pointer;
     text-decoration: none;
+}
+
+/* ===============================
+🔵 AC-4, AC-7, AC-8: CONTENEDOR DE ALERTAS
+=============================== */
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+/* ===============================
+🔵 AC-4, AC-7, AC-8: TOAST BASE
+=============================== */
+.toast {
+    background: #ffffff;
+    color: #333;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    width: 300px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    border-left: 6px solid #e74c3c;
+
+    transform: translateX(120%);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+/* ===============================
+🔵 AC-4, AC-7, AC-8: ANIMACIÓN TOAST
+=============================== */
+.toast.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* ===============================
+🔵 AC-4, AC-7, AC-8: TIPOS DE ALERTA
+=============================== */
+.toast.error {
+    border-left-color: #e74c3c;
+}
+
+.toast.success {
+    border-left-color: #2ecc71;
+}
+
+.toast.warning {
+    border-left-color: #f1c40f;
 }
