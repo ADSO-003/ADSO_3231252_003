@@ -153,3 +153,68 @@
                 }
             });
         });
+
+        
+
+        /* Validación de campos vacíos al enviar — bordes rojos + mensajes */
+        document.getElementById('vehicleForm').addEventListener('submit', e => {
+            e.preventDefault();
+            let allOk = true;
+
+            /* Placa */
+            const plateVal = ePlate.value.trim();
+            if (!plateVal) {
+                setPlateError('Este campo es obligatorio.');
+                allOk = false;
+            } else if (!PLATE_FORMAT.test(plateVal)) {
+                setPlateError(
+                    'Formato inválido. Auto: 3 letras + 3 dígitos. ' +
+                    'Moto: 3 letras + 2 dígitos + 1 letra.'
+                );
+                allOk = false;
+            } else if (SAME_ACCOUNT_PLATES.includes(plateVal)) {
+                setPlateError('Esta placa ya está registrada en tu cuenta.');
+                allOk = false;
+            } else if (OTHER_ACCOUNT_PLATES.includes(plateVal)) {
+                setPlateError('Esta placa ya está asociada a otra cuenta.');
+                allOk = false;
+            }
+
+            /* Tipo */
+            if (!selectedType) {
+                document.getElementById('type-msg').style.display = 'block';
+                allOk = false;
+            }
+
+            /* Marca */
+            const eBrand = document.getElementById('brand');
+            const eBrandMsg = document.getElementById('brand-msg');
+            if (!eBrand.value.trim()) {
+                eBrand.classList.add('error'); eBrand.classList.remove('ok');
+                eBrandMsg.style.display = 'block';
+                allOk = false;
+            } else {
+                eBrand.classList.add('ok'); eBrand.classList.remove('error');
+                eBrandMsg.style.display = 'none';
+            }
+
+            /* Modelo */
+            const eModel = document.getElementById('model');
+            const eModelMsg = document.getElementById('model-msg');
+            if (!eModel.value.trim()) {
+                eModel.classList.add('error'); eModel.classList.remove('ok');
+                eModelMsg.style.display = 'block';
+                allOk = false;
+            } else {
+                eModel.classList.add('ok'); eModel.classList.remove('error');
+                eModelMsg.style.display = 'none';
+            }
+
+            /* Color */
+            if (!selectedColor) {
+                eTrigger.classList.add('error'); eTrigger.classList.remove('ok');
+                eColorMsg.style.display = 'block';
+                allOk = false;
+            }
+
+            if (!allOk) return;
