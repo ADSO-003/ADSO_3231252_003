@@ -35,7 +35,7 @@ Client-Server N-Tier Architecture:
 |-------|-----------|
 | Frontend | HTML5 + CSS3 + JavaScript |
 | Backend | Node.js — REST API |
-| Database | PostgreSQL |
+| Database | MySQL |
 | Authentication | JWT |
 
 ---
