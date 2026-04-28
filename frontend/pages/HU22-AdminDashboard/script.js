@@ -44,3 +44,31 @@ function cargarDatos(periodo) {
     document.querySelectorAll(".derecha h4")[3].textContent = info.usuarios;
 }
 
+function verificarSistema() {
+    let estado = Math.random();
+
+    if (estado < 0.2) {
+        mostrarAlerta("⚠️ El sistema está fallando");
+    } else {
+        mostrarAlerta("✅ Sistema funcionando con normalidad");
+    }
+} 
+
+function verificarZonas() {
+    const barras = document.querySelectorAll(".progreso2");
+    const nombres = document.querySelectorAll(".nombre2");
+
+    barras.forEach((barra, i) => {
+        let ancho = parseInt(barra.style.width);
+
+        if (ancho >= 90) {
+            mostrarAlerta("⚠️ Zona " + nombres[i].textContent + " llena");
+        }
+    });
+}
+
+window.onload = () => {
+    cargarDatos("hoy");
+    verificarSistema();
+    verificarZonas();
+};
