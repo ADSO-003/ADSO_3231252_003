@@ -94,7 +94,8 @@ body {
     text-decoration: none; 
     font-weight: bold; 
     margin-left: 5px; 
-}@media (max-width: 480px) {
+}
+@media (max-width: 480px) {
     body { 
     padding: 15px; 
     align-items: flex-start; 
@@ -126,116 +127,4 @@ body {
 .logo img { 
     height: 35px; 
 } 
-}
-.toast-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* Estilo de la alerta individual */
-.toast {
-    background: #fff;
-    color: #333;
-    padding: 15px 20px;
-    border-radius: 4px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    display: flex;
-    align-items: center;
-    min-width: 300px;
-    /* El borde izquierdo rojo que se ve en tu foto */
-    border-left: 5px solid #d93025; 
-    animation: slideIn 0.3s ease forwards;
-}
-
-.toast i {
-    margin-right: 12px;
-    color: #d93025; /* Color del icono */
-    font-weight: bold;
-}
-
-@keyframes slideIn {
-    from { transform: translateX(100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-.toast.fade-out {
-    animation: slideOut 0.3s ease forwards;
-}
-
-@keyframes slideOut {
-    to { transform: translateX(100%); opacity: 0; }
-}
-
-/* Mejoras para los inputs cuando tienen error */
-.campo input.error {
-    border-color: #d93025 !important;
-    background-color: #fff8f8 !important;
-    transition: all 0.3s ease;
-}
-
-.campo input.success {
-    border-color: #4caf50 !important;
-    transition: all 0.3s ease;
-}
-
-/* Animación suave para el contenedor de toasts */
-.toast-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 350px;
-}
-
-/* Mejora para móviles */
-@media (max-width: 480px) {
-    .toast-container {
-        top: 10px;
-        right: 10px;
-        left: 10px;
-        max-width: calc(100% - 20px);
-    }
-    
-    .toast {
-        min-width: auto;
-        width: 100%;
-        padding: 12px 16px;
-        font-size: 13px;
-    }
-}
-/* Estilo del toast con borde izquierdo (como en tu imagen) */
-.toast {
-    background: #ffffff;
-    color: #333333;
-    padding: 14px 18px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    display: flex;
-    align-items: center;
-    border-left: 5px solid #d93025;
-    animation: slideIn 0.3s ease forwards;
-    font-size: 14px;
-    font-weight: 500;
-    backdrop-filter: blur(0px);
-}
-
-/* Diferentes tipos de toasts (opcional) */
-.toast.success {
-    border-left-color: #4caf50;
-}
-
-.toast.info {
-    border-left-color: #2196f3;
-}
-
-.toast.warning {
-    border-left-color: #ff9800;
 }
