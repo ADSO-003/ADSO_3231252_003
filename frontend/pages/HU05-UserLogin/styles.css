@@ -23,3 +23,48 @@ body {
     padding: 20px;
     text-align: center;
 }
+
+
+/* ===============================
+🔵 AC-1: LOGO DEL SISTEMA
+=============================== */
+.logo img {
+    width: 60%;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+/* ===============================
+🔵 AC-1: TÍTULO
+=============================== */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* ===============================
+🔵 AC-1: LABELS
+=============================== */
+label {
+    display: block;
+    text-align: left;
+    margin: 15px 0 5px;
+    font-size: 14px;
+}
+
+/* ===============================
+🔵 AC-1: INPUTS
+=============================== */
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+}
+
+/* 🔵 AC-1: ICONO INPUT */
+.icon {
+    margin-right: 10px;
+}
