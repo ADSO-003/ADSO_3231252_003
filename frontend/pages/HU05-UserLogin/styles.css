@@ -1,0 +1,25 @@
+/* AC-1: RESET GENERAL
+Evita estilos raros del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+   
+/* AC-1: BODY (CENTRADO DE PANTALLA) */
+body {
+    background: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} 
+
+/* AC-1: CONTENEDOR PRINCIPAL */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
