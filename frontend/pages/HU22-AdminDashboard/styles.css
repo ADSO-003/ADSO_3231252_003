@@ -84,3 +84,26 @@ header{
 .avatar-menu.activo {
     display: block;
 }
+
+.contenedor1{
+    background-color: rgb(243, 243, 248);
+    color: aliceblue;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 0px;
+}
+
+.tiempo{
+    background-color:rgb(21, 21, 50) ;
+    color: aliceblue;
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid aliceblue;
+}
+
+.titulo{
+    color: black;
+}
