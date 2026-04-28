@@ -44,3 +44,29 @@ border-radius: 6px;
 border: 1px solid #ccc;
 
 }
+
+.btn-guardar {
+
+margin-top: 20px;
+width: 100%;
+
+padding: 10px;
+
+background: #42A362;
+color: white;
+
+border: none;
+border-radius: 8px;
+
+font-size: 16px;
+font-weight: bold;
+
+cursor: pointer;
+
+}
+
+.btn-guardar:hover {
+
+background: #379456;
+
+}
