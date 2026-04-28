@@ -195,3 +195,38 @@ tr:nth-child(even){
     border-radius: 50%;
     cursor: pointer;
 }
+
+.avatar-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    min-width: 178px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .13);
+    z-index: 300;
+}
+
+/* Mostrar menú */
+.contenedor-perfil:hover .avatar-menu {
+    display: block;
+}
+
+.avatar-menu a {
+    display: block;
+    padding: 11px 16px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.avatar-menu a:last-child {
+    border-bottom: none;
+}
+
+.avatar-menu a:hover {
+    background: #e6f4ea;
+    color: green;
+} 

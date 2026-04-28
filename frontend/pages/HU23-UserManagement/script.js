@@ -85,3 +85,19 @@ document.querySelectorAll(".rolBtn").forEach(btn=>{
         actualizarContadores();
     });
 });
+
+actualizarContadores();
+
+const perfil = document.querySelector(".perfil");
+const menu = document.querySelector(".avatar-menu");
+
+perfil.addEventListener("click", () => {
+    menu.classList.toggle("activo");
+});
+
+// Cerrar si se da click afuera
+document.addEventListener("click", (e) => {
+    if (!perfil.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.remove("activo");
+    }
+});
