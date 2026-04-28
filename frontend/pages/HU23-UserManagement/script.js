@@ -44,14 +44,17 @@ document.querySelectorAll(".activarBtn").forEach(btn => {
     });
 });
 
+
 document.querySelectorAll(".rolBtn").forEach(btn=>{
     btn.addEventListener("click", ()=>{
 
         let fila = btn.closest("tr");
 
         if(fila.classList.contains("superAdmin")){
+
             alert("No puedes modificar al super admin");
             mostrarAlerta("Intento bloqueado", "error");
+            
             return;
         }
 
