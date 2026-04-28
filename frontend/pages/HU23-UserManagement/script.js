@@ -1,7 +1,5 @@
-
 const log = document.getElementById("log");
 
-// HISTORIAL
 function agregarLog(texto){
     const li = document.createElement("li");
     li.textContent = texto;
@@ -39,6 +37,18 @@ function actualizarContadores(){
     inactivosEl.textContent = inactivos;
     adminsEl.textContent = admins;
 }
+
+function mostrarAlerta(msg,tipo){
+    let cont = document.getElementById("contenedorAlertas");
+
+    let div = document.createElement("div");
+    div.className = "alertaToast "+tipo;
+    div.textContent = msg;
+
+    cont.appendChild(div);
+
+    setTimeout(()=>div.remove(),3000);
+
 document.querySelectorAll(".activarBtn").forEach(btn => {
     btn.addEventListener("click", () => {
 
@@ -95,7 +105,6 @@ perfil.addEventListener("click", () => {
     menu.classList.toggle("activo");
 });
 
-// Cerrar si se da click afuera
 document.addEventListener("click", (e) => {
     if (!perfil.contains(e.target) && !menu.contains(e.target)) {
         menu.classList.remove("activo");
