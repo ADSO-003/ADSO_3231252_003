@@ -171,3 +171,12 @@ input {
 .toast.warning {
     border-left-color: #f1c40f;
 }
+
+/* ===============================
+🔵 AC-1: RESPONSIVE
+=============================== */
+@media (min-width: 768px) {
+    .container {
+        max-width: 450px;
+    }
+}
