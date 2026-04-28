@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dashboard Administrativo</title>
+</head>
+<body>
+    
+    <header class="header">
+
+    <div class="logo">
+        <img src="../../assets/icons/logoParkea.png" alt="Logo Parkea">
+    </div>
+
+    <div class="menu">
+        
+        <button class="botones" id="btnUsuarios">Gestión de usuarios</button>
+        <button class="botones" id="btnAtras">Atras</button>
+        <button class="botones" id="btnSalir">Salir</button>
+        
+        <div class="contenedor-perfil">
+            <img src="../../assets/icons/logoPerfil.png" alt="Perfil" class="perfil">
+
+            
+            <nav class="avatar-menu" role="menu">
+                <a href="../HU11-ViewVehicles/index.html" role="menuitem">Mis vehículos</a>
+                <a href="../HU08-ProfileManagement/index.html" role="menuitem">Mi perfil</a>
+                <a href="../HU02-Homepage/index.html" role="menuitem" id="logoutLink">Cerrar sesión</a>
+            </nav>
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="contenedor1">
+
+    <h1 class="titulo">Dashboard Administrativo</h1>
+
+    <div class="filtros-tiempo">
+    <button class="tiempo" onclick="cargarDatos('hoy')">Hoy</button>
+    <button class="tiempo" onclick="cargarDatos('semana')">Esta Semana</button>
+    <button class="tiempo" onclick="cargarDatos('mes')">Este Mes</button>
+    </div>
+
+    </div>
+
+    <div class="contenedor2">
+
+        <div class="information">
+
+            <div class="izquierda">
+            <h3>Reservas Activas</h3>
+            <p class="Verde">+8 vs Ayer</p>
+            </div>
+
+            <div class="derecha">
+                <h4>189</h4>
+            </div>
+
+        </div>
+
+        <div class="information">
+
+            <div class="izquierda">
+            <h3>Ingresos</h3>
+            <p class="Verde">+8 vs Ayer</p>
+            </div>
+
+            <div class="derecha">
+                <h4>189</h4>
+            </div>
+
+        </div>
+
+        <div class="information">
+
+            <div class="izquierda">
+            <h3>Zonas activas</h3>
+            <p class="Verde">+8 vs Ayer</p>
+            </div>
+
+            <div class="derecha">
+                <h4>189</h4>
+            </div>
+
+        </div>
+
+        <div class="information">
+
+            <div class="izquierda">
+            <h3>Usuarios Registrados</h3>
+            <p class="Verde">+8 vs Ayer</p>
+            </div>
+
+            <div class="derecha">
+                <h4>189</h4>
+            </div>
+
+        </div>
+   
+    </div>
+
+    <div class="Contenedor3">
+
+    <div class="Caja">
+
+        <h2 class="titulo1">Reservas por Zona</h2>
+
+        <div class="fila">
+            <span class="nombre">Centro Norte</span>
+            <div class="barra">
+                <div class="progreso" style="width: 62%;"></div>
+            </div>
+            <span class="porcentaje">62</span>
+        </div>
+
+        <div class="fila">
+            <span class="nombre">El Centro</span>
+            <div class="barra">
+                <div class="progreso" style="width: 48%;"></div>
+            </div>
+            <span class="porcentaje">48</span>
+        </div>
+
+        <div class="fila">
+            <span class="nombre">San Mateo</span>
+            <div class="barra">
+                <div class="progreso" style="width: 38%;"></div>
+            </div>
+            <span class="porcentaje">38</span>
+        </div>
+
+        <div class="fila">
+            <span class="nombre">Postobon</span>
+            <div class="barra">
+                <div class="progreso" style="width: 38%;"></div>
+            </div>
+            <span class="porcentaje">38</span>
+        </div>
+
+        <p class="nota">Cada zona cuenta con un total de 100 cupos</p>
+
+    </div>
+
+    <div class="Caja caja-flex">
+
+        <h2 class="titulo1">Estados de Pago</h2>
+
+        <div class="contenido-pago">
+
+            <div class="donut">
+                <span>186</span>
+            </div>
+
+            <div class="leyenda">
+                <p><span class="color pagado"></span> Pagados: 100</p>
+                <p><span class="color pendiente"></span> Pendiente: 50</p>
+                <p><span class="color cancelado"></span> Cancelado: 38</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <div class="contenedor5">
+
+    <div class="caja2">
+        <h2 class="titulo1">Ocupacion de Zonas en tiempo real</h2>
+
+        <div class="fila2">
+            <span class="nombre2">Centro Norte</span>
+            <div class="barra2">
+                <div class="progreso2 verde" style="width: 20%;"></div>
+            </div>
+        </div>
+
+        <div class="fila2">
+            <span class="nombre2">El Centro</span>
+            <div class="barra2">
+                <div class="progreso2 naranja" style="width: 40%;"></div>
+            </div>
+        </div>
+
+        <div class="fila2">
+            <span class="nombre2">San Mateo</span>
+            <div class="barra2">
+                <div class="progreso2 rojo" style="width: 95%;"></div>
+            </div>
+        </div>
+
+        <div class="fila2">
+            <span class="nombre2">Postobon</span>
+            <div class="barra2">
+                <div class="progreso2 verde" style="width: 50%;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="caja2">
+        <h2 class="titulo1">Pagos Recientes</h2>
+
+        <div class="pago">
+            <span>Estados de Pago</span>
+            <span class="dinero">$3.600</span>
+        </div>
+
+        <div class="pago">
+            <span>Estados de Pago</span>
+            <span class="dinero">$2.000</span>
+        </div>
+
+        <div class="pago">
+            <span>Estados de Pago</span>
+            <span class="dinero">$3.000</span>
+        </div>
+
+        <div class="pago">
+            <span>Estados de Pago</span>
+            <span class="dinero">$3.200</span>
+        </div>
+
+        <div class="pago">
+            <span>Estados de Pago</span>
+            <span class="dinero">$3.500</span>
+        </div>
+
+    </div>
+
+
+<div id="contenedor-alertas"></div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
