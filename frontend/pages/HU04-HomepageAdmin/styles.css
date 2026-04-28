@@ -24,3 +24,41 @@ body{
 .logo img{
     height:40px;
 } 
+span{
+    margin-top: 12px;
+}
+.menu{
+    display:flex;
+    gap:40px;}
+
+.hero{
+  margin:20px;
+  border-radius:20px;
+  overflow:hidden;
+  background:#0b2233;
+  color:white;
+  padding:60px;
+  position:relative;
+  background: url("../../assets/images/parkea_illustration_hero_v2.svg");
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+}
+
+.hero-content{
+  position: relative;
+  max-width:500px;
+}
+.hero h1{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:14px;
+  line-height:1.5;
+}
