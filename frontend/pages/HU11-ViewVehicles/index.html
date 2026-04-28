@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mis Vehículos | PARKEA</title>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR DESKTOP -->
+    <nav class="navbar" aria-label="Navegación principal">
+        <a href="../HU03-HomepageCitizen/index.html" class="navbar-logo" aria-label="Inicio PARKEA">
+            <img src="../../assets/icons/logoParkea.png" alt="PARKEA" class="logo-img">
+        </a>
+        <div class="navbar-links">
+            <a href="../HU09-BrowseZones/index.html" class="nav-link">Zonas</a>
+            <a href="../HU18-BookingHistory/index.html" class="nav-link">Reservas</a>
+            <div class="avatar-wrap">
+                <button class="avatar-btn" aria-label="Menú de usuario" aria-haspopup="true">
+                    <img src="../../assets/icons/logoPerfil.png" alt="" aria-hidden="true" class="avatar-img">
+                </button>
+                <nav class="avatar-menu" role="menu">
+                    <a href="../HU11-ViewVehicles/index.html" role="menuitem">Mis vehículos</a>
+                    <a href="../HU08-ProfileManagement/index.html" role="menuitem">Mi perfil</a>
+                    <a href="../HU02-Homepage/index.html" role="menuitem" id="logoutLink">Cerrar sesión</a>
+                </nav>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NAVBAR MOBILE -->
+    <div class="navbar-mobile" role="banner">
+        <a href="../HU03-HomepageCitizen/index.html" class="navbar-logo" aria-label="Inicio PARKEA">
+            <img src="../../assets/icons/logoParkea.png" alt="PARKEA" class="logo-img-mob">
+        </a>
+        <div class="navbar-links-mob">
+            <a href="../HU09-BrowseZones/index.html" class="nav-link-mob">Zonas</a>
+            <a href="../HU18-BookingHistory/index.html" class="nav-link-mob">Reservas</a>
+            <div class="avatar-wrap">
+                <button class="avatar-btn" aria-label="Menú de usuario" aria-haspopup="true">
+                    <img src="../../assets/icons/logoPerfil.png" alt="" aria-hidden="true" class="avatar-img-mob">
+                </button>
+                <nav class="avatar-menu avatar-menu-mob" role="menu">
+                    <a href="../HU11-ViewVehicles/index.html" role="menuitem">Mis vehículos</a>
+                    <a href="../HU08-ProfileManagement/index.html" role="menuitem">Mi perfil</a>
+                    <a href="../HU02-Homepage/index.html" role="menuitem" id="logoutLinkMob">Cerrar sesión</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- MAIN -->
+    <main class="page-wrapper" id="main-content">
+
+        <div class="page-header">
+            <h1 class="page-title">Mis Vehículos</h1>
+            <button class="btn-add" onclick="window.location.href='../HU10-RegisterVehicle/index.html'"
+                aria-label="Agregar nuevo vehículo">
+                + Agregar Vehículo
+            </button>
+        </div>
+        <p class="page-subtitle" id="vehicleSubtitle" aria-live="polite"></p>
+
+        <!-- Loading -->
+        <div class="loading-state" id="loadingState">
+            <div class="spinner" aria-hidden="true"></div>
+            <p>Cargando tus vehículos...</p>
+        </div>
+
+        <!-- Empty state -->
+        <div class="empty-state" id="emptyState" role="region" aria-label="Sin vehículos">
+            <div class="empty-icon" aria-hidden="true">🚗</div>
+            <h2 class="empty-title">Sin vehículos registrados</h2>
+            <p class="empty-msg">Aún no tienes vehículos registrados.</p>
+            <button class="btn-add-empty" onclick="window.location.href='../HU10-RegisterVehicle/index.html'">
+                + Agregar vehículo
+            </button>
+        </div>
+
+        <!-- Lista -->
+        <ul class="vehicles-list" id="vehiclesList" role="list" aria-label="Lista de vehículos"></ul>
+
+
+
+        <!-- Infinite scroll trigger -->
+        <div class="load-trigger" id="loadTrigger" aria-hidden="true"></div>
+        <div class="load-spinner" id="loadSpinner" role="status" aria-label="Cargando más vehículos">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Footer desktop -->
+        <div class="page-footer" id="pageFooter" style="display:none;">
+            <button class="btn-back" onclick="history.back()" aria-label="Volver a la página anterior">Atrás</button>
+            <div class="info-note" role="note">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <circle cx="8" cy="8" r="7.5" stroke="#6B5900" stroke-width="1.2" />
+                    <line x1="8" y1="7" x2="8" y2="12" stroke="#6B5900" stroke-width="1.5" stroke-linecap="round" />
+                    <circle cx="8" cy="4.5" r="0.9" fill="#6B5900" />
+                </svg>
+                La estrella ★ marca tu vehículo por defecto · Se preselecciona automáticamente al iniciar una reserva.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Mobile sticky back bar -->
+    <div class="mobile-back-bar" id="mobileBackBar" style="display:none;">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
