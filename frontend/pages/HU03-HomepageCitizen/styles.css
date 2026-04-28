@@ -17,4 +17,166 @@ body{
     top: 0;
     z-index: 100;
 }
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
 
+.logo-img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, .88);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    color: #fff;
+    outline: 2px solid #42A362;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+/* Avatar */
+.avatar-wrap {
+    position: relative;
+}
+
+.avatar-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-btn:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.avatar-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Dropdown */
+.avatar-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    min-width: 178px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .13);
+    z-index: 300;
+}
+
+.avatar-wrap:hover .avatar-menu,
+.avatar-wrap:focus-within .avatar-menu {
+    display: block;
+}
+
+.avatar-menu a {
+    display: block;
+    padding: 11px 16px;
+    font-size: 14px;
+    color: #1A1A1A;
+    text-decoration: none;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.avatar-menu a:last-child {
+    border-bottom: none;
+}
+
+.avatar-menu a:hover,
+.avatar-menu a:focus-visible {
+    background: #F0FAF0;
+    color: #42A362;
+    outline: none;
+}
+
+/* ── NAVBAR MOBILE (oculta por defecto) ── */
+.navbar-mobile {
+    display: none;
+    background: #0B1121;
+    height: 56px;
+    padding: 0 16px;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-img-mob {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.navbar-links-mob {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-link-mob {
+    color: rgba(255, 255, 255, .88);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-link-mob:hover,
+.nav-link-mob:focus-visible {
+    color: #fff;
+    outline: 2px solid #42A362;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+.avatar-img-mob {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Dropdown mobile — abre hacia la izquierda para no salirse */
+.avatar-menu-mob {
+    right: 0;
+    left: auto;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: flex;
+    }
+}
