@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Homeuser</title>
+</head>
+<body>
+     <nav class="navbar" aria-label="Navegación principal">
+        <a href="../HU03-HomepageCitizen/index.html" class="navbar-logo" aria-label="Inicio PARKEA">
+            <img src="../../assets/icons/logoParkea.png" alt="PARKEA" class="logo-img">
+        </a>
+        <div class="navbar-links">
+            <div class="avatar-wrap">
+                <button class="avatar-btn" aria-label="Menú de usuario" aria-haspopup="true">
+                    <img src="../../assets/icons/logoPerfil.png" alt="" aria-hidden="true" class="avatar-img">
+                </button>
+                <nav class="avatar-menu" role="menu">
+                    <a href="../HU11-ViewVehicles/index.html" role="menuitem">Mis vehículos</a>
+                    <a href="../HU08-ProfileManagement/index.html" role="menuitem">Mi perfil</a>
+                    <a href="../HU02-Homepage/index.html" role="menuitem" id="logoutLink">Cerrar sesión</a>
+                </nav>
+            </div>
+        </div>
+    </nav>  
+
+    <!-- NAVBAR MOBILE -->
+    <div class="navbar-mobile" role="banner">
+        <a href="../HU03-HomepageCitizen/index.html" class="navbar-logo" aria-label="Inicio PARKEA">
+            <img src="logoParkea.png" alt="PARKEA" class="logo-img-mob">
+        </a>
+        <div class="navbar-links-mob">
+            <a href="../HU09-BrowseZones/index.html" class="nav-link-mob">Zonas</a>
+            <a href="../HU18-BookingHistory/index.html" class="nav-link-mob">Reservas</a>
+            <div class="avatar-wrap">
+                <button class="avatar-btn" aria-label="Menú de usuario" aria-haspopup="true">
+                    <img src="logoPerfil.png" alt="" aria-hidden="true" class="avatar-img-mob">
+                </button>
+                <nav class="avatar-menu avatar-menu-mob" role="menu">
+                    <a href="../HU11-ViewVehicles/index.html" role="menuitem">Mis vehículos</a>
+                    <a href="../HU08-ProfileManagement/index.html" role="menuitem">Mi perfil</a>
+                    <a href="../HU02-Homepage/index.html" role="menuitem" id="logoutLinkMob">Cerrar sesión</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="hero">
+  <div class="hero-content">
+    <h1>Bienvenidos a Parkea</h1>
+    <p>Gestion de parqueadero de forma rapida segura y eficiente</p>
+    <br>
+    <p>En Parkea hacemos que estacionar deje de ser un problema:
+reserva tu espacio de forma rápida, segura y sin complicaciones, para que disfrutes tu tiempo sin preocuparte por dónde dejar tu vehículo.</p>
+  </div>
+</div>
+
+<div class="cards">
+
+  <div class="card">
+    <div class="icono verde">
+        <img src="../../assets/icons/coche.png">
+    </div>
+    <h2>Mis vehiculos</h2>
+    <p>Consulta los espacios disponibles y reserva tu lugar</p>
+    <div class="btn verde" onclick="window.location.href='../HU11-ViewVehicle/index.html'">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icono azul">
+        <img src="../../assets/icons/pasador-de-ubicacion.png">
+    </div>
+    <h2>Zonas</h2>
+    <p>Explora las Zonas y lugares de nuestro parqueadero</p>
+    <div class="btn azul" onclick="window.location.href='../HU09-BrowseZones/index.html'"></div>
+  </div>
+
+  <div class="card">
+    <div class="icono amarillo">
+        <img src="../../assets/icons/historial-de-pedidos.png">
+    </div>
+    <h2>Historial</h2>
+    <p>Historial de reservas para usuarios registrados</p>
+    <div class="btn amarillo" onclick="window.location.href='../HU18-BookingHistory/index.html'"></div>
+  </div>
+</div>
+</body>
+</html>
