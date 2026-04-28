@@ -317,7 +317,6 @@ header{
 .naranja{ background-color: #FF9800; }
 .rojo{ background-color: #F44336; }
 
-/* PAGOS */
 .pago{
     display: flex;
     justify-content: space-between;
@@ -325,7 +324,6 @@ header{
     padding: 8px 0;
 }
 
-/* DINERO */
 .dinero{
     color: #2e7d32;
     font-weight: bold;
@@ -337,4 +335,114 @@ header{
 .contenedor5{
     padding-left: 15px;
     padding-right: 15px;
+}
+
+@media (max-width: 768px){
+
+    .header{
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    }
+
+    .botones{
+    width: auto;
+    font-size: 12px;
+    padding: 5px 10px;
+    }
+
+    .logo img{
+        height: 40px;
+    }
+
+    .contenedor1{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .tiempo{
+        width: 100%;
+    }
+
+    .contenedor2{
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .information{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .Contenedor3{
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .Caja{
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+
+    .titulo1{
+        font-size: 18px;
+    }
+
+    .Caja:first-child{
+        order: 2;
+    }
+
+    .caja-flex{
+        order: 1;
+    }
+
+    .donut{
+        width: 100px;
+        height: 100px;
+    }
+
+    .nombre,
+    .nombre2{
+        width: 90px;
+        font-size: 12px;
+    }
+
+    .porcentaje{
+        font-size: 12px;
+    }
+
+    .contenedor5{
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .caja2{
+        width: 100%;
+    }
+
+    #contenedor-alertas{
+    right: 10px;
+    left: 10px; 
+    top: 70px;
+    }
+
+    .alerta{
+    width: 100%;
+    }
+
+    body{
+        padding-bottom: 20px;
+    }
 }

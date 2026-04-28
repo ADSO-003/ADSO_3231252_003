@@ -134,3 +134,10 @@ function actualizarBarras() {
     });
 }
 
+document.querySelectorAll("#logoutLink, #logoutLinkMob").forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        mostrarAlerta("Sesión cerrada");
+        window.location.href = '../HU02-Homepage/index.html';
+    });
+});
