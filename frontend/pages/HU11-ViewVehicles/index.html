@@ -52,3 +52,34 @@
             </div>
         </div>
     </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- MAIN -->
+    <main class="page-wrapper" id="main-content">
+
+        <div class="page-header">
+            <h1 class="page-title">Mis Vehículos</h1>
+            <button class="btn-add" onclick="window.location.href='../HU10-RegisterVehicle/index.html'"
+                aria-label="Agregar nuevo vehículo">
+                + Agregar Vehículo
+            </button>
+        </div>
+        <p class="page-subtitle" id="vehicleSubtitle" aria-live="polite"></p>
+
+        <!-- Loading -->
+        <div class="loading-state" id="loadingState">
+            <div class="spinner" aria-hidden="true"></div>
+            <p>Cargando tus vehículos...</p>
+        </div>
+
+        <!-- Empty state -->
+        <div class="empty-state" id="emptyState" role="region" aria-label="Sin vehículos">
+            <div class="empty-icon" aria-hidden="true">🚗</div>
+            <h2 class="empty-title">Sin vehículos registrados</h2>
+            <p class="empty-msg">Aún no tienes vehículos registrados.</p>
+            <button class="btn-add-empty" onclick="window.location.href='../HU10-RegisterVehicle/index.html'">
+                + Agregar vehículo
+            </button>
+        </div>
