@@ -4,7 +4,6 @@ body{
     font-family: Arial, sans-serif;
 }
 
-/* HEADER */
 .header{
     display: flex;
     justify-content: space-between;
@@ -67,4 +66,60 @@ body{
     width:250px;
     border-radius:8px;
     border:1px solid #ccc;
+}
+table{
+    width:95%;
+    margin:20px;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+th{
+    background-color: #0b1121;
+    color:white;
+    padding:10px;
+}
+
+td{
+    padding:10px;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f2f2f2;
+}
+
+.badge{
+    padding:5px 10px;
+    border-radius:20px;
+    border:2px solid;
+}
+
+.activo{
+    color:green;
+    border-color:green;
+}
+
+.inactivo{
+    color:red;
+    border-color:red;
+}
+.btn{
+    padding:6px 10px;
+    border-radius:20px;
+    border:2px solid;
+    background:white;
+    cursor:pointer;
+}
+
+.verde{
+    color:green;
+    border-color:green;
+}
+
+.rojo{
+    color:red;
+    border-color:red;
 }
