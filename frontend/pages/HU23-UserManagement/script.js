@@ -48,6 +48,7 @@ function mostrarAlerta(msg,tipo){
     cont.appendChild(div);
 
     setTimeout(()=>div.remove(),3000);
+}
 
 document.querySelectorAll(".activarBtn").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -60,6 +61,37 @@ document.querySelectorAll(".activarBtn").forEach(btn => {
             return;
         }
 
+        let nombre = fila.children[0].textContent;
+        let estado = fila.querySelector(".estado");
+
+        let esActivo = estado.textContent === "Activo";
+
+        if(!confirm("¿Seguro que deseas cambiar el estado de " + nombre + "?")) return;
+
+        if(esActivo){
+            estado.textContent = "Inactivo";
+            estado.classList.remove("activo");
+            estado.classList.add("inactivo");
+
+            btn.textContent = "Activar";
+            btn.classList.replace("rojo","verde");
+
+            agregarLog(nombre+" fue desactivado");
+            mostrarAlerta(nombre+" desactivado", "error");
+
+        }else{
+            estado.textContent = "Activo";
+            estado.classList.remove("inactivo");
+            estado.classList.add("activo");
+
+            btn.textContent = "Desactivar";
+            btn.classList.replace("verde","rojo");
+
+            agregarLog(nombre+" fue activado");
+            mostrarAlerta(nombre+" activado", "success");
+        }
+
+        actualizarContadores();
     });
 });
 
