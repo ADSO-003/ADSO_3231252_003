@@ -1,5 +1,5 @@
 function guardarCambios(){
 
-console.log("Guardando cambios...");
+alert("Datos actualizados correctamente");
 
 }
