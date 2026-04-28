@@ -10,3 +10,20 @@ document.querySelectorAll(".btn-editar").forEach(function(btn, index) {
     window.location.href = "editzone.html";
   });
 });
+
+document.querySelectorAll(".btn-des").forEach(function(btn, index) {
+  btn.addEventListener("click", function() {
+    const zona = zonas[index];
+    if (zona.estado === "cancelada") {
+      mostrarToast('"' + zona.nombre + '" ya está desactivada', "warning");
+      return;
+    }
+    if (!confirm('¿Deseas desactivar "' + zona.nombre + '"?')) return;
+    zonas[index].estado = "cancelada";
+    const spanEstado = document.querySelectorAll(".fila")[index].querySelector(".estado");
+    spanEstado.textContent = "Cancelada";
+    spanEstado.classList.remove("activa");
+    spanEstado.classList.add("cancelada");
+    mostrarToast('"' + zona.nombre + '" ha sido desactivada', "warning");
+  });
+});
