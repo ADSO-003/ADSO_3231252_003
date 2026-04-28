@@ -184,3 +184,14 @@ tr:nth-child(even){
 .success{ border-left:6px solid #28a745; }
 .error{ border-left:6px solid #dc3545; }
 .info{ border-left:6px solid #007bff; }
+
+.contenedor-perfil {
+    position: relative;
+}
+
+.perfil {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+}
