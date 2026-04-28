@@ -218,3 +218,31 @@
             }
 
             if (!allOk) return;
+
+            
+
+
+            /* Vincular vehículo al ID del usuario autenticado */
+            // const vehicle = {
+            //     userId: localStorage.getItem('parkea_user_id') || 'demo-user-001',
+            //     plate: plateVal,
+            //     type: selectedType,
+            //     brand: document.getElementById('brand').value.trim(),
+            //     model: document.getElementById('model').value.trim(),
+            //     color: selectedColor,
+            //     description: document.getElementById('description').value.trim(),
+            //     createdAt: new Date().toISOString()
+            // };
+
+            // // Guardar en localStorage (simulación de base de datos)
+            // const saved = JSON.parse(localStorage.getItem('parkea_vehicles') || '[]');
+            // saved.unshift(vehicle);
+            // localStorage.setItem('parkea_vehicles', JSON.stringify(saved));
+
+            /* Toast de éxito + redirección a la lista de vehículos */
+            document.getElementById('toast').classList.add('show');
+
+            setTimeout(() => {
+                window.location.href = '../HU11-ViewVehicles/index.html';
+            }, 1600);
+        });
