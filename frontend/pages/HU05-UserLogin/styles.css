@@ -24,9 +24,7 @@ body {
     text-align: center;
 }
 
-/* ===============================
-🔵 AC-3: BOTÓN ADMINISTRADOR
-=============================== */
+/* AC-3: BOTÓN ADMINISTRADOR*/
 .admin-btn {
     position: fixed;
     top: 20px;
@@ -50,9 +48,7 @@ body {
     transform: scale(0.95);
 }
 
-/* ===============================
-🔵 AC-1: LOGO DEL SISTEMA
-=============================== */
+/* AC-1: LOGO DEL SISTEMA */
 .logo img {
     width: 60%;
     object-fit: contain;
@@ -60,16 +56,12 @@ body {
     margin-top: 40px;
 }
 
-/* ===============================
-🔵 AC-1: TÍTULO
-=============================== */
+/* AC-1: TÍTULO */
 h2 {
     margin-bottom: 20px;
 }
 
-/* ===============================
-🔵 AC-1: LABELS
-=============================== */
+/* AC-1: LABELS */
 label {
     display: block;
     text-align: left;
@@ -77,9 +69,7 @@ label {
     font-size: 14px;
 }
 
-/* ===============================
-🔵 AC-1: INPUTS
-=============================== */
+/* AC-1: INPUTS */
 .input-group {
     display: flex;
     align-items: center;
@@ -93,3 +83,25 @@ label {
 .icon {
     margin-right: 10px;
 }
+
+/* 🔵 AC-5: INPUT (CONTRASEÑA OCULTA POR TYPE PASSWORD EN HTML) */
+input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+/*  AC-1 y AC-10: BOTÓN LOGIN */
+.login-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #0d1b2a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
