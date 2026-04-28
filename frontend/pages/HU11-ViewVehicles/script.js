@@ -159,3 +159,73 @@ function buildCard(v) {
         </button>
     </div>
     `;
+
+    
+
+    // Estrella: solo una a la vez
+    li.querySelector('.btn-star').addEventListener('click', () => setDefault(vid));
+
+    // Eliminar → HU-13
+    li.querySelector('.btn-delete').addEventListener('click', () => {
+        window.location.href = `../HU13-DeleteVehicle/index.html?id=${vid}`;
+    });
+
+    // Editar → HU-12
+    li.querySelector('.btn-edit').addEventListener('click', () => {
+        window.location.href = `../HU12-EditVehicle/index.html?id=${vid}`;
+    });
+
+    return li;
+}
+
+/* RENDER POR LOTES (infinite scroll) */
+function renderBatch() {
+    const list = document.getElementById('vehiclesList');
+    const slice = allVehicles.slice(renderedCount, renderedCount + PAGE_SIZE);
+    slice.forEach(v => list.appendChild(buildCard(v)));
+    renderedCount += slice.length;
+}
+
+function setupInfiniteScroll() {
+    // Desconectar observador previo si existe (evita duplicados en rebuild)
+    if (scrollObserver) {
+        scrollObserver.disconnect();
+        scrollObserver = null;
+    }
+
+    if (allVehicles.length <= PAGE_SIZE) return; // no se necesita scroll
+
+    const trigger = document.getElementById('loadTrigger');
+    const spinner = document.getElementById('loadSpinner');
+
+    scrollObserver = new IntersectionObserver(async entries => {
+        if (!entries[0].isIntersecting || renderedCount >= allVehicles.length) return;
+        spinner.classList.add('visible');
+        await new Promise(r => setTimeout(r, 350));
+        renderBatch();
+        spinner.classList.remove('visible');
+        if (renderedCount >= allVehicles.length) scrollObserver.disconnect();
+    }, { rootMargin: '80px' });
+
+    scrollObserver.observe(trigger);
+}
+
+/* MARCAR POR DEFECTO — solo una estrella a la vez */
+function setDefault(sid) {
+    // sid ya es String desde el data-id del botón
+    allVehicles.forEach(v => {
+        v.isDefault = (String(v.id) === sid);
+    });
+    save();
+    rebuildList();
+    showToast('Vehículo por defecto actualizado.');
+}
+
+/* REBUILD COMPLETO DE LA LISTA */
+function rebuildList() {
+    // Desconectar scroll observer antes de limpiar el DOM
+    if (scrollObserver) {
+        scrollObserver.disconnect();
+        scrollObserver = null;
+    }
+
