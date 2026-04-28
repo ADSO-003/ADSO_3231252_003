@@ -40,6 +40,16 @@ Client-Server N-Tier Architecture:
 
 ---
 
+## 🔐 Security
+
+- Passwords encrypted with **bcrypt**
+- Authentication with **JWT** (1-hour expiration)
+- Role-based access control (Citizen / Administrator)
+- SQL injection protection via ORM
+- Structured HTTP error handling
+
+---
+
 ## 🌱 Branch Strategy
 
 - main       → Final delivery
@@ -98,6 +108,27 @@ cd ADSO_3231252_003
 # Open any page directly in browser:
 # frontend/pages/HU01-Homepage/index.html
 ```
+
+---
+
+## 📊 Non-Functional Requirements
+
+**Security**
+- Passwords encrypted with bcrypt
+- JWT tokens with 1-hour expiration
+- Role-based access control
+
+**Performance**
+- Response time under 3 seconds for 50 concurrent users
+
+**Availability**
+- 95% uptime in local environment
+- Structured HTTP error handling
+
+**Usability**
+- Fully responsive interface (web + mobile)
+- Visual state indicators throughout the UI
+- WCAG 2.1 Level AA compliant
 
 ---
 
