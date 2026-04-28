@@ -59,3 +59,16 @@ document.querySelectorAll(".btn-des").forEach(function(btn, index) {
     mostrarToast('"' + zona.nombre + '" ha sido desactivada', "warning");
   });
 });
+
+document.querySelectorAll(".btn-eliminar").forEach(function(btn, index) {
+  btn.addEventListener("click", function() {
+    const zona = zonas[index];
+    if (!confirm('¿Eliminar "' + zona.nombre + '"? Esta acción no se puede deshacer.')) return;
+    const fila = btn.closest("tr");
+    fila.style.transition = "opacity 0.3s";
+    fila.style.opacity = "0";
+    setTimeout(function() { fila.remove(); }, 300);
+    zonas.splice(index, 1);
+    mostrarToast('"' + zona.nombre + '" ha sido eliminada', "error");
+  });
+});

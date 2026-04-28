@@ -25,7 +25,7 @@
                     <a href="../HU02-Homepage/index.html" role="menuitem" id="logoutLink">Cerrar sesión</a>
                 </nav>
             </div>
-        </div>
+        </div>  
     </nav>
 
 
@@ -52,8 +52,9 @@
     <div class="container">
       <div class="header">
         <h1>Gestión de Zonas</h1>
-        <button class="btn-nueva" onclick="window.location.href='../HU'">+ Nueva zona</button>
+        <button class="btn-nueva" onclick="window.location.href='../HU20-CreateZone/index.html'">+ Nueva zona</button>
       </div>
+
       <table class="tabla">
         <thead class="thead">
           <tr>
@@ -63,7 +64,8 @@
             <th>Cupos libres</th>
             <th>Tarifa</th>
             <th>Estado</th>
-            </tr>
+            <th>Acción</th>
+          </tr>
         </thead>
 
         <tbody>
@@ -74,15 +76,48 @@
             <td>12</td>
             <td>$ 5,500</td>
             <td><span class="estado activa">Activa</span></td>
-          </tr>
+            <td>
               <div class="acciones">
-                <button class="btn-editar">Editar</button>  
+                <button class="btn-editar" onclick="window.location.href='../HU21-EditZone/index.html'">Editar</button>
                 <button class="btn-des">Desactivar</button>
+                <button class="btn-eliminar">Eliminar</button>
               </div>
             </td>
-         </tr>
+          </tr>
 
+          <tr class="fila">
+            <td>Zona norte</td>
+            <td>Cll 6 # 13-36</td>
+            <td>40</td>
+            <td>2</td>
+            <td>$ 5,000</td>
+            <td><span class="estado activa">Activa</span></td>
+            <td>
+              <div class="acciones">
+                <button class="btn-editar" onclick="window.location.href='../HU21-EditZone/index.html'">Editar</button>
+                <button class="btn-des">Desactivar</button>
+                <button class="btn-eliminar">Eliminar</button>
+              </div>
+            </td>
+          </tr>
 
-<script src="js/zonemanagement.js"></script>
+          <tr class="fila">
+            <td>Zona centro</td>
+            <td>Cll 8 # 13-36</td>
+            <td>40</td>
+            <td>18</td>
+            <td>$ 2,500</td>
+            <td><span class="estado cancelada">Cancelada</span></td>
+            <td>
+              <div class="acciones">
+                <button class="btn-editar" onclick="window.location.href='../HU21-EditZone/index.html'">Editar</button>
+                <button class="btn-des">Desactivar</button>
+                <button class="btn-eliminar">Eliminar</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>  
+    <script src="script.js"></script>
 </body>
 </html>

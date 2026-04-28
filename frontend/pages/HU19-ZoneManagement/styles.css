@@ -30,26 +30,7 @@ body{
     width: auto;
     display: block;
 }
-@media (max-width: 768px) {
-    .navbar {
-        display: none;
-    }
 
-    .navbar-mobile {
-        display: flex;
-    }
-}
-.menu{
-    display:flex;
-    gap:20px;
-    align-items:center;
-}
-.user{
-  margin-left: 5px;
-}
-.user img{
-  height: 35px;
-}
 .navbar-links {
     display: flex;
     align-items: center;
@@ -137,6 +118,7 @@ body{
     color: #42A362;
     outline: none;
 }
+
 /* ── NAVBAR MOBILE (oculta por defecto) ── */
 .navbar-mobile {
     display: none;
@@ -149,22 +131,26 @@ body{
     top: 0;
     z-index: 100;
 }
+
 .logo-img-mob {
     height: 40px;
     width: auto;
     display: block;
 }
+
 .navbar-links-mob {
     display: flex;
     align-items: center;
     gap: 18px;
 }
+
 .nav-link-mob {
     color: rgba(255, 255, 255, .88);
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
 }
+
 .nav-link-mob:hover,
 .nav-link-mob:focus-visible {
     color: #fff;
@@ -172,6 +158,7 @@ body{
     outline-offset: 3px;
     border-radius: 3px;
 }
+
 .avatar-img-mob {
     width: 32px;
     height: 32px;
@@ -179,10 +166,57 @@ body{
     display: block;
     object-fit: cover;
 }
+
+/* Dropdown mobile — abre hacia la izquierda para no salirse */
 .avatar-menu-mob {
     right: 0;
     left: auto;
 }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: flex;
+    }
+}
+.menu{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+.user{
+  margin-left: 5px;
+}
+.user img{
+  height: 35px;
+}
+/* CONTENEDOR */
+.container{
+    padding:20px;
+}
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+}
+.header h1{
+    font-size:28px;
+}
+.btn-nueva{
+  background:#19c12e;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  padding:10px 18px;
+  cursor:pointer;
+  font-weight:bold;
+}
+/* TABLA */
 .tabla{
   width:100%;
   border-collapse:separate;
@@ -204,6 +238,7 @@ body{
 .fila td{
   padding:14px;
 }
+/* ESTADO */
 .estado{
   padding:6px 12px;
   border-radius:10px;
@@ -222,7 +257,7 @@ body{
     position: relative;
     left: -20px;
 }
-/* BOTONES TABLA */
+
 .acciones{
     display:flex;
     flex-direction:column;
@@ -251,39 +286,4 @@ body{
   border-radius:8px;
   padding:5px 10px;
   cursor:pointer;
-}
-.btn-nueva{
-  background:#19c12e;
-  color:#fff;
-  border:none;
-  border-radius:8px;
-  padding:10px 18px;
-  cursor:pointer;
-  font-weight:bold;
-}
-.tabla{
-  width:100%;
-  border-collapse:separate;
-  border-spacing:0 10px;
-}
-.thead{
-  background:#0b1f2a;
-  color:#fff;
-}
-.thead th{
-  padding:12px;
-  text-align:left;
-  font-weight:bold;
-}
-.fila{
-  background:#f4f4f4;
-  border:1px solid #ffffff;
-}
-.fila td{
-  padding:14px;
-}
-.tabla{
-  width:100%;
-  border-collapse:separate;
-  border-spacing:0 10px;
 }
