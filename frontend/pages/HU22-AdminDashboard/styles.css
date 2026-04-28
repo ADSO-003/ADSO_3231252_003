@@ -107,3 +107,29 @@ header{
 .titulo{
     color: black;
 }
+.contenedor2{
+    background-color: rgb(245, 245, 250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.information{
+    background-color:rgb(21, 21, 50) ;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    color: aliceblue;
+    width: 300px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.derecha{
+    font-size: 25px;
+}
+
+.Verde{
+    color: rgb(42, 149, 42);
+}

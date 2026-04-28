@@ -43,3 +43,4 @@ function cargarDatos(periodo) {
     document.querySelectorAll(".derecha h4")[2].textContent = info.zonas;
     document.querySelectorAll(".derecha h4")[3].textContent = info.usuarios;
 }
+
