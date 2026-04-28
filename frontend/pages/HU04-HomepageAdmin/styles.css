@@ -62,3 +62,76 @@ span{
   font-size:14px;
   line-height:1.5;
 }
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:50px;
+  margin:70px 30px;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:white;
+  width:280px;
+  border-radius:12px;
+  border:1px solid #ccc;
+  padding:25px;
+  text-align:center;
+  position:relative;
+}
+
+.icono{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  position:absolute;
+  top:-35px;
+  left:50%;
+  transform:translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icono img{
+    width: 40px;
+    height: 40px;
+}
+.verde{
+    background:#1dbb17;
+}
+.azul{
+    background:#1a1ab6;
+}
+.amarillo{
+    background:#e6b800;
+}
+.card h2{
+  margin-top:40px;
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.btn{
+  width:120px;
+  height:12px;
+  border-radius:10px;
+  margin:0 auto;
+}
+
+.btn.verde{
+    background:#1dbb17;
+}
+.btn.azul{
+    background:#1a1ab6;
+}
+.btn.amarillo{
+    background:#e6b800;
+}
+.register{
+  background: #021c2b;
+  color: white;
+}
