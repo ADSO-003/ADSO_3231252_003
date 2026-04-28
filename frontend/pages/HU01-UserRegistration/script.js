@@ -156,7 +156,6 @@ function validarFormulario(event) {
         // event.target.reset();
     }
 }
-
 // Función auxiliar para encontrar el primer campo inválido
 function encontrarPrimerCampoInvalido() {
     const campos = document.querySelectorAll('.campo input');
