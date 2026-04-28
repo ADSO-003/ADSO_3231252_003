@@ -30,15 +30,46 @@ function actualizarContadores(){
     inactivosEl.textContent = inactivos;
     adminsEl.textContent = admins;
 }
-document.querySelectorAll(".activarBtn").forEach(btn=>{
+document.querySelectorAll(".activarBtn").forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        let fila = btn.closest("tr");
+
+        if (fila.classList.contains("superAdmin")) {
+            alert("No puedes modificar al super admin");
+            mostrarAlerta("Acción bloqueada", "error");
+            return;
+        }
+
+    });
+});
+
+document.querySelectorAll(".rolBtn").forEach(btn=>{
     btn.addEventListener("click", ()=>{
 
         let fila = btn.closest("tr");
 
         if(fila.classList.contains("superAdmin")){
             alert("No puedes modificar al super admin");
-            mostrarAlerta("Acción bloqueada", "error");
+            mostrarAlerta("Intento bloqueado", "error");
             return;
         }
 
-        
+        let rol = fila.querySelector(".rol");
+        let nombre = fila.children[0].textContent;
+
+        if(rol.textContent === "Ciudadano"){
+            rol.textContent = "Admin";
+            btn.textContent = "Quitar Admin";
+            btn.classList.replace("verde","rojo");
+            agregarLog(nombre+" ahora es Admin");
+        }else{
+            rol.textContent = "Ciudadano";
+            btn.textContent = "Hacer Admin";
+            btn.classList.replace("rojo","verde");
+            agregarLog(nombre+" ya no es Admin");
+        }
+
+        actualizarContadores();
+    });
+});
