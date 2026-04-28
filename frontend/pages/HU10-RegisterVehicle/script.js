@@ -17,3 +17,20 @@
         const ePlateOk = document.getElementById('plate-ok');
         const ePlateErr = document.getElementById('plate-err-icon');
         const ePlateMsg = document.getElementById('plate-msg');
+
+        
+
+        ePlate.addEventListener('input', () => {
+            // Forzar mayúsculas y solo caracteres válidos
+            ePlate.value = ePlate.value
+                .toUpperCase()
+                .replace(/[^A-Z0-9\s]/g, '');
+
+            const val = ePlate.value.trim();
+            clearPlateState();
+            if (!val) return;
+
+            /* Duplicado en misma cuenta */
+            if (SAME_ACCOUNT_PLATES.includes(val)) {
+                return setPlateError('Esta placa ya está registrada en tu cuenta.');
+            }
