@@ -46,3 +46,14 @@ body{
     margin:20px;
     flex-wrap:wrap;
 }
+.resumen{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.resumen div{
+    background:#eee;
+    padding:8px 15px;
+    border-radius:10px;
+}
