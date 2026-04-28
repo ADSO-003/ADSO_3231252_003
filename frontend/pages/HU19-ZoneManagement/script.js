@@ -3,3 +3,10 @@ let zonas = [
   { id: 2, nombre: "Zona norte",  direccion: "Cll 6 # 13-36", capacidad: 40, cuposLibres: 2,  tarifa: 5000,  estado: "activa"    },
   { id: 3, nombre: "Zona centro", direccion: "Cll 8 # 13-36", capacidad: 40, cuposLibres: 18, tarifa: 2500,  estado: "cancelada" },
 ];
+
+document.querySelectorAll(".btn-editar").forEach(function(btn, index) {
+  btn.addEventListener("click", function() {
+    localStorage.setItem("zonaEditar", JSON.stringify(zonas[index]));
+    window.location.href = "editzone.html";
+  });
+});

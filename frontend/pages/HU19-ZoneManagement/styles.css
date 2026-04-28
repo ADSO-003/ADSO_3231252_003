@@ -193,3 +193,60 @@ body{
 .fila td{
   padding:14px;
 }
+.estado{
+  padding:6px 12px;
+  border-radius:10px;
+  font-weight:bold;
+  display:inline-block;
+}
+.activa{
+    background:#7ed957;
+    color:#0a3b0a;
+    position: relative;
+    left: -7px;
+}
+.cancelada{
+    background:#bdbdbd;
+    color:#000;
+    position: relative;
+    left: -20px;
+}
+/* BOTONES TABLA */
+.acciones{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+.btn-editar{
+  background:#eaffea;
+  border:2px solid #22c55e;
+  color:#16a34a;
+  border-radius:8px;
+  padding:5px 10px;
+  cursor:pointer;
+}
+.btn-des{
+  background:#e0e0e0;
+  border:1px solid #999;
+  color:#666;
+  border-radius:8px;
+  padding:5px 10px;
+  cursor:pointer;
+}
+.btn-eliminar{
+  background:#ffeaea;
+  border:2px solid #ef4444;
+  color:#dc2626;
+  border-radius:8px;
+  padding:5px 10px;
+  cursor:pointer;
+}
+.btn-nueva{
+  background:#19c12e;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  padding:10px 18px;
+  cursor:pointer;
+  font-weight:bold;
+}
