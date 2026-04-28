@@ -94,3 +94,68 @@ async function loadVehicles() {
         showToast('Error al cargar vehículos.');
     }
 }
+
+function showLoading(on) {
+    document.getElementById('loadingState').style.display = on ? 'flex' : 'none';
+}
+function showEmpty(on) {
+    document.getElementById('emptyState').style.display = on ? 'flex' : 'none';
+}
+
+/* CONSTRUIR TARJETA DE VEHÍCULO */
+function buildCard(v) {
+    const li = document.createElement('li');
+    // Usar siempre String(v.id) como identificador único del DOM
+    const vid = String(v.id);
+    li.dataset.id = vid;
+    li.className = 'vehicle-card' + (v.isDefault ? ' is-default' : '');
+
+    const hex = COLOR_HEX[v.color] || '#AAAAAA';
+    const borderStyle = v.color === 'blanco' ? 'border-color:#999;' : '';
+
+    li.innerHTML = `
+    <div class="vc-left">
+        <div class="vc-plate">${v.plate || '—'}</div>
+        <div class="vc-color-row">
+        <span class="vc-color-label">Color</span>
+        <div class="color-dot" style="background:${hex};${borderStyle}"></div>
+        </div>
+    </div>
+
+    <div class="vc-divider" aria-hidden="true"></div>
+
+    <div class="vc-info">
+        <div class="vc-name">${v.brand || ''} ${v.model || ''}</div>
+        <div class="vc-meta">
+        <span>${TYPE_LABEL[v.type] || v.type || '—'}</span>
+        ${typeIcon(v.type)}
+        ${v.isDefault
+            ? `<span aria-hidden="true"> · </span><span class="vc-default-badge">Por defecto</span>`
+            : ''}
+        </div>
+    </div>
+
+    <button class="btn-star"
+            data-id="${vid}"
+            aria-label="${v.isDefault ? 'Vehículo por defecto' : 'Marcar como vehículo por defecto'}"
+            aria-pressed="${v.isDefault}">
+        ${v.isDefault
+            ? '<span aria-hidden="true">⭐</span>'
+            : '<span class="star-empty" aria-hidden="true">☆</span>'}
+    </button>
+
+    <div class="vc-action-divider" aria-hidden="true"></div>
+
+    <div class="vc-actions">
+        <button class="btn-action btn-delete"
+                data-id="${vid}"
+                aria-label="Eliminar vehículo ${v.plate}">
+        Eliminar
+        </button>
+        <button class="btn-action btn-edit"
+                data-id="${vid}"
+                aria-label="Editar vehículo ${v.plate}">
+        Editar
+        </button>
+    </div>
+    `;
