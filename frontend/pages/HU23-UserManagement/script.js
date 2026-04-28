@@ -1,4 +1,13 @@
 
+const log = document.getElementById("log");
+
+// HISTORIAL
+function agregarLog(texto){
+    const li = document.createElement("li");
+    li.textContent = texto;
+    log.prepend(li);
+}
+
 document.getElementById("btnAtras").addEventListener("click", () => {
     window.location.href = '../HU22-AdminDashboard/index.html';
 });
@@ -54,7 +63,7 @@ document.querySelectorAll(".rolBtn").forEach(btn=>{
 
             alert("No puedes modificar al super admin");
             mostrarAlerta("Intento bloqueado", "error");
-            
+
             return;
         }
 

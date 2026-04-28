@@ -123,3 +123,38 @@ tr:nth-child(even){
     color:red;
     border-color:red;
 }
+
+/* HISTORIAL */
+.historial{
+    margin:20px;
+    padding:15px;
+    background:#f9f9f9;
+    border-radius:10px;
+    width:50%;
+    max-height:180px;
+    overflow-y:auto;
+}
+
+/* FILTROS */
+.filtros{
+    margin:20px;
+    display:flex;
+    gap:10px;
+}
+
+.filtroBtn{
+    background:#222;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.filtroBtn:hover{
+    background:#444;
+}
+
+.activoFiltro{
+    background-color: #0b1121;
+}
