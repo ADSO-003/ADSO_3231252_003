@@ -66,6 +66,14 @@ buscador.addEventListener("keyup", () => {
     mostrarZonas(filtradas);
 });
 
+function filtrarConCupos() {
+    mostrarZonas(zonas.filter(z => z.cupos > 0));
+}
+
+function mostrarTodas() {
+    mostrarZonas(zonas);
+}
+
 
 mostrarZonas(zonas);
 
