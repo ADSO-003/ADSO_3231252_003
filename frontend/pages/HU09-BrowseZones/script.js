@@ -74,6 +74,12 @@ function filtrarConCupos() {
 function mostrarTodas() {
     mostrarZonas(zonas);
 }
+function irReserva(nombre) {
+    window.location.href =
+        '../HU14-SelectSlot/index.html?zona=' +
+        encodeURIComponent(nombre);
+}
+
 
 
 mostrarZonas(zonas);
