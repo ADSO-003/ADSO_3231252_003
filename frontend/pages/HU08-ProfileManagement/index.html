@@ -2,58 +2,58 @@
 <html lang="es">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gestión de Perfil</title>
-
-<link rel="stylesheet" href="styles.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<div class="perfil-container">
+    <!-- NAVBAR DESKTOP -->
+    <nav class="navbar" aria-label="Navegación principal">
+        <a href="../HU03-HomepageCitizen/index.html" class="navbar-logo">
+            <img src="../../assets/icons/logoParkea.png" alt="PARKEA" class="logo-img">
+        </a>
+        <div class="navbar-links">
+            <a href="../HU09-BrowseZones/index.html" class="nav-link">Zonas</a>
+            <a href="../HU18-BookingHistory/index.html" class="nav-link">Reservas</a>
+        </div>
+    </nav>
 
-<h2>Gestión de Perfil</h2>
+    <!-- CONTENIDO -->
+    <div class="container">
 
-<form>
+        <!-- PERFIL SUPERIOR -->
+        <div class="perfil-top">
+            <div class="foto-perfil">👤</div>
+            <div>
+                <h2>Juan Perez</h2>
+                <p class="correo">juan@correo.com - Usuario</p>
+            </div>
+        </div>
 
-<label>Nombre Completo *</label>
-<input type="text" id="nombre">
+        <!-- TARJETAS -->
+        <div class="cards">
 
-<label>Teléfono *</label>
-<input type="text" id="telefono">
+            <!-- INFORMACIÓN PERSONAL -->
+            <div class="card">
+                <h3>Información Personal</h3>
+                <label>Nombre Completo</label>
+                <input type="text" id="nombre" value="Juan Perez">
+                <label>Teléfono</label>
+                <input type="text" id="telefono" value="+57 322 2698742">
+                <label>Correo (No Editable)</label>
+                <input type="email" value="juan@correo.com" disabled>
+                <button class="btn-verde" onclick="guardarPerfil()">
+                    Guardar cambios
+                </button>
+            </div>
 
-<label>Correo electrónico</label>
-<input 
-type="email" 
-id="correo" 
-value="usuario@email.com" 
-disabled>
+        </div>
+    </div>
 
-<label>Foto de perfil</label>
-<input type="file" id="foto">
-
-<label>Contraseña actual</label>
-<input type="password" id="passwordActual">
-
-<label>Nueva contraseña</label>
-<input type="password" id="passwordNueva">
-
-<label>Confirmar contraseña</label>
-<input type="password" id="passwordConfirmar">
-
-<button type="button" onclick="guardarCambios()" class="btn-guardar">
-Guardar cambios
-</button>
-</form>
-
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
