@@ -106,3 +106,11 @@ h2 {
     background: #eee;
     cursor: pointer;
 }
+
+.mensaje {
+    display: none;
+    /* oculto por defecto */
+    text-align: center;
+    color: red;
+    margin-top: 10px;
+}
