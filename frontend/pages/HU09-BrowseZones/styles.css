@@ -87,6 +87,7 @@ h2 {
 }
 
 .barra-busqueda {
+    margin-top: 10px;
     display: flex;
     gap: 10px;
     margin-bottom: 15px;
