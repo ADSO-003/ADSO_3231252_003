@@ -174,3 +174,13 @@ h2 {
         opacity: 1;
     }
 }
+
+/* ALERTA */
+.alerta {
+    background: #b66f6f;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border-left: 5px solid #C62828;
+}
