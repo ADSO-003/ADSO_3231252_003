@@ -19,40 +19,41 @@ const mensaje = document.getElementById("mensajeNoResultados");
 
 function mostrarZonas(datos) {
     lista.innerHTML = "";
+    if (datos.length === 0) {
+        mensaje.style.display = "block";
+        return;
+    }
+    mensaje.style.display = "none";
     datos.forEach(z => {
-        lista.innerHTML += `<div class="zona">
-        <div class="info"><h3>${z.nombre}</h3>
-        <p>${z.direccion} - $${z.precio}/hr</p></div>
-        <div class="disponibilidad">
-        <p>Disponibilidad:</p><p>${z.disponibilidad}</p></div>
-    </div>`;
-
         let boton = "";
-
         if (z.cupos === 0) {
-            boton = `<button class="btn-rojo">Sin cupos</button>`;
+            boton = `
+                <button class="btn-rojo">
+                    Sin cupos
+                </button>`;
         } else {
-            boton = `<button class="btn-verde"
-    onclick="irReserva('${z.nombre}')">
-    Reservar (${z.cupos} Cupos)
-    </button>`;
+            boton = `
+                <button class="btn-verde"
+                        onclick="irReserva('${z.nombre}')">
+                    Reservar (${z.cupos} Cupos)
+                </button>`;
         }
 
-
         let tarjeta = `
-        <div class="zona">
-        <div class="info">
-        <h3>${z.nombre}</h3>
-        <p>${z.direccion} - $${z.precio}/hr</p>
-        </div>
-        <div class="disponibilidad">
-        <p>Disponibilidad:</p>
-        <p>${z.disponibilidad}</p>
-    </div>
-    ${boton}
-    </div>`;
+            <div class="zona">
+                <div class="info">
+                    <h3>${z.nombre}</h3>
+                    <p>
+                        ${z.direccion} - $${z.precio}/hr
+                    </p>
+                </div>
+                <div class="disponibilidad">
+                    <p>Disponibilidad:</p>
+                    <p>${z.disponibilidad}</p>
+                </div>
+                ${boton}
+            </div>`;
         lista.innerHTML += tarjeta;
-
     });
 }
 
