@@ -11,7 +11,15 @@ let zonas = [
         nombre: "Zona San Mateo", direccion: "Av. Simón Bolívar #8-10", precio: 1200,
         disponibilidad: "De 8 AM - A 12 PM", cupos: 0
     },
-    // ... resto de zonas
+        {
+        nombre: "Zona Villa Olímpica", direccion: "Av. Principal #33-11", precio: 2200,
+        disponibilidad: "Las 24/hr", cupos: 15
+    },
+    {
+        nombre: "Zona La Pradera", direccion: "Cra 10 #12-45", precio: 1700,
+        disponibilidad: "De 7 AM - A 9 PM", cupos: 5
+    }
+
 ];
 
 const lista = document.getElementById("listaZonas");
@@ -79,6 +87,23 @@ function irReserva(nombre) {
         '../HU14-SelectSlot/index.html?zona=' +
         encodeURIComponent(nombre);
 }
+
+document.getElementById('logoutLink')
+    ?.addEventListener('click', function (e) {
+        e.preventDefault();
+        localStorage.removeItem('parkea_token');
+        localStorage.removeItem('parkea_user_id');
+        window.location.href = '../HU02-Homepage/index.html';
+    });
+
+document.getElementById('logoutLinkMob')
+    ?.addEventListener('click', function (e) {
+        e.preventDefault();
+        localStorage.removeItem('parkea_token');
+        localStorage.removeItem('parkea_user_id');
+        window.location.href = '../HU02-Homepage/index.html';
+    });
+
 
 
 
