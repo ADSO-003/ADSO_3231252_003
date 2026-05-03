@@ -125,3 +125,149 @@ body {
     border-radius: 8px;
     cursor: pointer;
 }
+
+/* NAVBAR DESKTOP */
+.navbar {
+    background: #0B1121;
+    height: 62px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, .88);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+/* AVATAR */
+.avatar-wrap {
+    position: relative;
+}
+
+.avatar-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.avatar-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    min-width: 178px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .13);
+    z-index: 300;
+}
+
+.avatar-wrap:hover .avatar-menu,
+.avatar-wrap:focus-within .avatar-menu {
+    display: block;
+}
+
+.avatar-menu a {
+    display: block;
+    padding: 11px 16px;
+    font-size: 14px;
+    color: #1A1A1A;
+    text-decoration: none;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.avatar-menu a:hover {
+    background: #F0FAF0;
+    color: #42A362;
+}
+
+/* NAVBAR MOBILE */
+.navbar-mobile {
+    display: none;
+    background: #0B1121;
+    height: 56px;
+    padding: 0 16px;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-img-mob {
+    height: 40px;
+    width: auto;
+}
+
+.navbar-links-mob {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-link-mob {
+    color: rgba(255, 255, 255, .88);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.avatar-img-mob {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: flex;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
