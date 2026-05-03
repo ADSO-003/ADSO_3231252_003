@@ -27,6 +27,18 @@ function mostrarZonas(datos) {
         <p>Disponibilidad:</p><p>${z.disponibilidad}</p></div>
     </div>`;
 
+        let boton = "";
+
+        if (z.cupos === 0) {
+            boton = `<button class="btn-rojo">Sin cupos</button>`;
+        } else {
+            boton = `<button class="btn-verde"
+    onclick="irReserva('${z.nombre}')">
+    Reservar (${z.cupos} Cupos)
+    </button>`;
+        }
+
+
         let tarjeta = `
         <div class="zona">
         <div class="info">
@@ -39,7 +51,7 @@ function mostrarZonas(datos) {
     </div>
     ${boton}
     </div>`;
-    lista.innerHTML += tarjeta;
+        lista.innerHTML += tarjeta;
 
     });
 }

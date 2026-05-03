@@ -60,3 +60,28 @@ h2 {
     width: 170px;
     margin-left: 20px;
 }
+
+.btn-verde {
+    background: #F0FAF0;
+    color: #42A362;
+    border: 2px solid #42A362;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-verde:hover {
+    background: #e3f5e3;
+}
+
+.btn-rojo {
+    background: #FFEBEE;
+    color: #C62828;
+    border: 2px solid #C62828;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: not-allowed;
+}
