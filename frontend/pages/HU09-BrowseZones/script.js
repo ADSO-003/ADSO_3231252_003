@@ -26,6 +26,21 @@ function mostrarZonas(datos) {
         <div class="disponibilidad">
         <p>Disponibilidad:</p><p>${z.disponibilidad}</p></div>
     </div>`;
+
+        let tarjeta = `
+        <div class="zona">
+        <div class="info">
+        <h3>${z.nombre}</h3>
+        <p>${z.direccion} - $${z.precio}/hr</p>
+        </div>
+        <div class="disponibilidad">
+        <p>Disponibilidad:</p>
+        <p>${z.disponibilidad}</p>
+    </div>
+    ${boton}
+    </div>`;
+    lista.innerHTML += tarjeta;
+
     });
 }
 
