@@ -17,7 +17,7 @@ let zonas = [
     },
     {
         nombre: "Zona La Pradera", direccion: "Cra 10 #12-45", precio: 1700,
-        disponibilidad: "De 7 AM - A 9 PM", cupos: 5
+        disponibilidad: "De 7 AM - A 9 PM", cupos: 0
     }
 
 ];

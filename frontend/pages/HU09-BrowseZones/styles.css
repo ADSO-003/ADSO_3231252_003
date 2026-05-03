@@ -235,3 +235,43 @@ h2 {
         display: flex;
     }
 }
+
+.mapa {
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    display: block;
+}
+
+/* Responsive tarjetas */
+@media(max-width:768px) {
+    .barra-busqueda {
+        flex-direction: column;
+    }
+
+    .zona {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .info {
+        min-width: 100%;
+    }
+
+    .disponibilidad {
+        width: 100%;
+        text-align: left;
+    }
+
+    .zona button {
+        width: auto;
+        margin-left: 0;
+    }
+}
