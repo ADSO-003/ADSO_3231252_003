@@ -12,3 +12,19 @@ function cancelarReserva() {
     // Por ahora simulamos la cancelación exitosa:
     mostrarExito();
 }
+function mostrarExito() {
+    let modal = document.createElement("div");
+    modal.className = "modal";
+    modal.style.display = "flex";
+    modal.innerHTML = `
+        <div class="modal-content">
+            <div class="modal-icono">✔</div>
+            <h3>Reserva cancelada</h3>
+            <p>La reserva fue cancelada exitosamente.</p>
+            <button class="btn-modal"
+                onclick="location.href='../HU18-BookingHistory/index.html'">
+                OK
+            </button>
+        </div>`,
+        document.body.appendChild(modal);
+}
