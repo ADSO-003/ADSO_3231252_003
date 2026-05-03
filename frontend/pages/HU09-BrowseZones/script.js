@@ -56,5 +56,16 @@ function mostrarZonas(datos) {
     });
 }
 
+const buscador = document.getElementById("buscador");
+
+buscador.addEventListener("keyup", () => {
+    let texto = buscador.value.toLowerCase();
+    let filtradas = zonas.filter(z =>
+        z.nombre.toLowerCase().includes(texto)
+    );
+    mostrarZonas(filtradas);
+});
+
+
 mostrarZonas(zonas);
 
