@@ -99,6 +99,12 @@ For full diagrams visit the [Wiki](https://github.com/ADSO-003/ADSO_3231252_003/
 
 ---
 
+## Design — Figma
+
+[View mockups in Figma](https://www.figma.com/design/SD51rDFRFIsGMBIgsyi4Pc/mockups?node-id=2-39&p=f&t=wxPCu28dAiXRWzSL-0)
+
+---
+
 ## Functional Requirements
 
 | ID | Requirement |
