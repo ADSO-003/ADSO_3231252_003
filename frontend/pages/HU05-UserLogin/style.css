@@ -1,43 +1,197 @@
- body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
- }
-
- h1 {
-    color: #333;
- }
-
- form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
- }
-
- label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
- }
-
- input[type="text"],
- input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* ===============================
+ AC-2: RESET GENERAL
+Evita estilos raros del navegador
+=============================== */
+* {
+    margin: 0; 
+    padding: 0;
     box-sizing: border-box;
- }
+    font-family: Arial, sans-serif;
+} 
 
- button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
+/* ===============================
+ AC-2: BODY (CENTRADO DE PANTALLA)
+=============================== */
+body {
+    background: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ===============================
+ AC-2: CONTENEDOR PRINCIPAL (FORMULARIO)
+=============================== */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ===============================
+ AC-1: BOTÓN ADMINISTRADOR (VISIBLE ARRIBA IZQUIERDA)
+=============================== */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    width: 50px;
+    height: 40px;
+
+    background: #0d1b2a;
+    color: white;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
- }
 
- button:hover {
-    background-color: #0056b3;
- }
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+/*  AC-1: Interacción del botón */
+.back-btn:active {
+    transform: scale(0.95);
+}
+
+/* ===============================
+ AC-2: LOGO DEL SISTEMA
+=============================== */
+.logo img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* ===============================
+ AC-2: TÍTULO
+=============================== */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* ===============================
+ AC-2: LABELS
+=============================== */
+label {
+    display: block;
+    text-align: left;
+    margin: 15px 0 5px;
+    font-size: 14px;
+}
+
+/* ===============================
+ AC-2: INPUTS (EMAIL, PASSWORD, ADMIN KEY)
+=============================== */
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+}
+
+/* Icono */
+.icon {
+    margin-right: 10px;
+}
+
+/*  AC-4: INPUT (contraseña oculta ya viene por type="password") */
+input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* ===============================
+ AC-2 y AC-5: BOTÓN LOGIN
+============================== */
+.login-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #0d1b2a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ===============================
+ AC-6: CONTENEDOR DE ALERTAS
+=============================== */
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+/* ===============================
+ AC-6: TOAST BASE
+=============================== */
+.toast {
+    background: #ffffff;
+    color: #333;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    width: 300px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    border-left: 6px solid #e74c3c;
+
+    transform: translateX(120%);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+/* ===============================
+ AC-6: ANIMACIÓN
+=============================== */
+.toast.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+ 
+/* ===============================
+ AC-6: TIPOS DE ALERTA
+=============================== */
+.toast.error {
+    border-left-color: #e74c3c;
+}
+
+.toast.success {
+    border-left-color: #2ecc71;
+}
+
+.toast.warning {
+    border-left-color: #f1c40f;
+}
+
+/* ===============================
+ AC-2: RESPONSIVE
+=============================== */
+@media (min-width: 768px) {
+    .container {
+        max-width: 450px;
+    }
+}

@@ -1,21 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="es">
+
+<head> 
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
+    <title>Login Administrador</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+
 <body>
-    <h1>Login</h1>
-    <form action="/login" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br><br>
-        <button type="submit">Login</button>
-    </form>
+
+    <div class="container">
+
+        <!-- AC-1: Botón para acceso administrador -->
+        <button class="back-btn">←</button>
+
+        <!-- AC-2: Logo -->
+        <div class="logo">
+            <img src="img/logo.jpeg" alt="Logo del sistema">
+        </div>
+
+        <!-- AC-2: Título -->
+        <h2>Iniciar sesión</h2>
+
+        <!-- AC-2: Formulario -->
+        <form id="loginForm">
+
+            <!-- AC-2: Correo -->
+            <label>Correo electrónico</label>
+            <div class="input-group">
+                <span class="icon">✉</span>
+                <input id="correo" type="email">
+            </div>
+
+            <!-- AC-4: Contraseña oculta -->
+            <label>Contraseña</label>
+            <div class="input-group">
+                <span class="icon">🔒</span>
+                <input id="password" type="password">
+            </div>
+
+            <!-- AC-2: Clave administrativa -->
+            <label>Clave administrativa</label>
+            <div class="input-group">
+                <span class="icon">🔒</span>
+                <input id="admin" type="password">
+            </div>
+
+            <!-- AC-2 y AC-5 -->
+            <button type="submit" class="login-btn">Iniciar sesión</button>
+        </form>
+
+    </div>
+
+    <!-- AC-6: Alertas -->
+    <div id="toast-container"></div>
+
+    <script src="HU005.js"></script>
+
 </body>
 </html>
