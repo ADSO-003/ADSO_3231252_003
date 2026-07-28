@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR DESKTOP -->
+    <nav class="navbar" aria-label="Navegación principal">
+        <a href="../HU03-HomepageCitizen/index.html" class="navbar-logo">
+            <img src="../../assets/icons/logoParkea.png" alt="PARKEA" class="logo-img">
+        </a>
+        <div class="navbar-links">
+            <a href="../HU09-BrowseZones/index.html" class="nav-link">Zonas</a>
+            <a href="../HU18-BookingHistory/index.html" class="nav-link">Reservas</a>
+            <!-- Dentro de .navbar-links (desktop) agregar avatar -->
+            <div class="avatar-wrap">
+                <button class="avatar-btn" aria-label="Menú de usuario">
+                    <img src="../../assets/icons/logoPerfil.png" alt="" class="avatar-img">
+                </button>
+                <nav class="avatar-menu" role="menu">
+                    <a href="../HU11-ViewVehicles/index.html">Mis vehículos</a>
+                    <a href="../HU08-ProfileManagement/index.html">Mi perfil</a>
+                    <a href="../HU02-Homepage/index.html" id="logoutLink">Cerrar sesión</a>
+                </nav>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR MOBILE (después del navbar desktop) -->
+    <div class="navbar-mobile" role="banner">
+        <a href="../HU03-HomepageCitizen/index.html" class="navbar-logo">
+            <img src="../../assets/icons/logoParkea.png" alt="PARKEA" class="logo-img-mob">
+        </a>
+        <div class="navbar-links-mob">
+            <a href="../HU09-BrowseZones/index.html" class="nav-link-mob">Zonas</a>
+            <a href="../HU18-BookingHistory/index.html" class="nav-link-mob">Reservas</a>
+            <div class="avatar-wrap">
+                <button class="avatar-btn">
+                    <img src="../../assets/icons/logoPerfil.png" alt="" class="avatar-img-mob">
+                </button>
+                <nav class="avatar-menu avatar-menu-mob" role="menu">
+                    <a href="../HU11-ViewVehicles/index.html">Mis vehículos</a>
+                    <a href="../HU08-ProfileManagement/index.html">Mi perfil</a>
+                    <a href="../HU02-Homepage/index.html" id="logoutLinkMob">Cerrar sesión</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CONTENIDO -->
+    <div class="container">
+
+        <!-- PERFIL SUPERIOR -->
+        <div class="perfil-top">
+            <div class="foto-perfil">👤</div>
+            <div>
+                <h2>Juan Perez</h2>
+                <p class="correo">juan@correo.com - Usuario</p>
+            </div>
+        </div>
+
+        <!-- TARJETAS -->
+        <div class="cards">
+
+            <!-- INFORMACIÓN PERSONAL -->
+            <div class="card">
+                <h3>Información Personal</h3>
+                <label>Nombre Completo</label>
+                <input type="text" id="nombre" value="Juan Perez">
+                <label>Teléfono</label>
+                <input type="text" id="telefono" value="+57 322 2698742">
+                <label>Correo (No Editable)</label>
+                <input type="email" value="juan@correo.com" disabled>
+                <button class="btn-verde" onclick="guardarPerfil()">
+                    Guardar cambios
+                </button>
+            </div>
+            <!-- CAMBIAR CONTRASEÑA (dentro de .cards) -->
+            <div class="card">
+                <h3>Cambiar Contraseña</h3>
+                <label>Contraseña Actual</label>
+                <input type="password" id="actual">
+                <label>Nueva Contraseña</label>
+                <input type="password" id="nueva">
+                <label>Confirmar Nueva</label>
+                <input type="password" id="confirmar">
+                <button class="btn-verde" onclick="cambiarPassword()">
+                    Actualizar Contraseña
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div id="modal-icono" class="modal-icono">✔</div>
+            <h3 id="modal-titulo">Cambios guardados</h3>
+            <p id="modal-texto">La información fue actualizada correctamente.</p>
+            <button class="btn-modal" onclick="cerrarModal()">OK</button>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
